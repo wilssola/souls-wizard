@@ -1,0 +1,611 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/WolfTheZelda/Desktop/Souls Wizard/DocFX",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Chat.ChatInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Chat.ChatInterface.html",
+          "hash": "gQc6E64QOHAJnzR5M9+eyQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Chat.ChatItem.ClickAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Chat.ChatItem.ClickAction.html",
+          "hash": "mX+l1ZS1anJexbit+27Mcw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Chat.ChatItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Chat.ChatItem.html",
+          "hash": "IY97tLwe+72O3YqFkfgtsw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Chat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Chat.html",
+          "hash": "MFkWfTQFlAWKJlp0KTvYKg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Gallery.GalleryInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Gallery.GalleryInterface.html",
+          "hash": "+vEh4VI1BZtMzcc4QM8nRw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Gallery.GalleryItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Gallery.GalleryItem.html",
+          "hash": "fTT/UVRtjg0/lT/EHH4g6Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Gallery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Gallery.html",
+          "hash": "fkRivsErwEZUTzrdYGx2+g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Monster.MonsterController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Monster.MonsterController.html",
+          "hash": "EiQDpZ//XNS2s+mDfPUEgA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Monster.MonsterFirst.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Monster.MonsterFirst.html",
+          "hash": "323AsTN6D+f+DRO9ZrJX7g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Monster.MonsterInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Monster.MonsterInterface.html",
+          "hash": "qGxZd2qJD8P1OsKxPUl4hg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Monster.MonsterMission.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Monster.MonsterMission.html",
+          "hash": "9L1Noo8Sh5wXZgZannu7yw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Monster.MonsterSpawn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Monster.MonsterSpawn.html",
+          "hash": "1wdYzAtUeJNksaioIOyEJQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Monster.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Monster.html",
+          "hash": "kfeyWf+nHw+1ingbJEgp6Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Monsters.MonstersInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Monsters.MonstersInterface.html",
+          "hash": "c90e1QYDTB/vyO0MFJRCww=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Monsters.MonstersItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Monsters.MonstersItem.html",
+          "hash": "dTdvRKz2QzJMLMZRJ1lspQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Monsters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Monsters.html",
+          "hash": "XITgI8fUJsa4ZnJY5N/4VA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Player.PlayerAnimator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Player.PlayerAnimator.html",
+          "hash": "O2Dh4jGgI6k7l45j1VflFQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Player.PlayerCamera.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Player.PlayerCamera.html",
+          "hash": "kVb2Y5HqDiFzg4JmDo2HyQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Player.PlayerCharacter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Player.PlayerCharacter.html",
+          "hash": "FexHxjOGT0kwLg8HteCiTA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Player.PlayerController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Player.PlayerController.html",
+          "hash": "cl4tPlqCOzRIvajo4gslLw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Player.PlayerInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Player.PlayerInterface.html",
+          "hash": "FeL9/7reR0kiUAOKCoV2AA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Player.PlayerMission.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Player.PlayerMission.html",
+          "hash": "tMjz4caMaBLbs/ayszGYGA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Player.html",
+          "hash": "hvzRvBoGMy6MkMFGRoYPCg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Popup.PopupManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Popup.PopupManager.html",
+          "hash": "1f8x/JCRrEELa3/OYz/5pQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Popup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Popup.html",
+          "hash": "ApJZ+Hv4tYEXnvD3KqIQ5g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Quest.QuestInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Quest.QuestInterface.html",
+          "hash": "VxDOmBGNwfirpBeGjExzZA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Quest.QuestItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Quest.QuestItem.html",
+          "hash": "rc/k7rZh7lBOczKmDiEqzQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Quest.QuestPhoto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Quest.QuestPhoto.html",
+          "hash": "6/ew5Cad5uf4GPfsCrfS6g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Quest.QuestPointstop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Quest.QuestPointstop.html",
+          "hash": "cWy0Bv42KK36wMepD+NLjA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Quest.QuestTarget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Quest.QuestTarget.html",
+          "hash": "BjRIhz//1XPseAH2Q7faQA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Quest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Quest.html",
+          "hash": "fer3FSyBdNVKvAK6N83AtQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Settings.SettingsInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Settings.SettingsInterface.html",
+          "hash": "FSaIAF0GQvM15l7ffhfWMA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.Settings.html",
+          "hash": "CVKAtl5WL0NwejpbdFso+w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.System.SystemBuilding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.System.SystemBuilding.html",
+          "hash": "X03HVkb+dbYEQNgbk4269w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.System.SystemInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.System.SystemInterface.html",
+          "hash": "Sf4D1H6en5vrkSpJgJQu0w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.System.SystemSky.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.System.SystemSky.html",
+          "hash": "+MaJwylo37iKeClmXQNgLg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.System.SystemSound.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.System.SystemSound.html",
+          "hash": "buKEwRcBNaVijlb6cMb+vA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TecWolf.System.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TecWolf.System.html",
+          "hash": "MkT3dmPR1CDF9UP0C3QPWw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "sGidS7+DcF94hJeQl+z0eQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "hBapUW9q87LFabCmZkcFYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "wo5jKdLc5zWJGyoOw+er9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "kiEajOly8Y0Fv1OMBIWQbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "k+/dkjFuwAVS32HduMpmBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 38,
+          "skipped_file_count": 38
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

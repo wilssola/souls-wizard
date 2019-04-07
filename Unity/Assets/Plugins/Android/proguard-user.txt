@@ -1,0 +1,9 @@
+-keep class com.facebook.unity.** { *; }
+-keep class com.facebook.sdk.** { *; }
+
+-keep class com.yasirkula.unity.** { *; }
+
+-keep class com.google.firebase.** { *; }
+
+-keep class com.mapbox.services.** { *; }
+-keep class net.sanukin.** { *; }

@@ -1,0 +1,33 @@
+{
+	"rules": {    
+		".read": "auth != null",
+		".write": "auth != null",
+
+		"usuarios": {
+			"$uid": {
+				".write": "auth != null && auth.uid == $uid"
+			}
+		},
+
+		"galeria-publica": {
+			".write": "auth != null && (auth.uid == 'jMwvcOgUp1bQkll3Aq3zK12ihvX2' || auth.uid == 'aMafbpTHCnUS92iofqTE0CJyWi72')"
+		},
+		"galeria-privada": {
+			".read": "auth != null && (auth.uid == 'jMwvcOgUp1bQkll3Aq3zK12ihvX2' || auth.uid == 'aMafbpTHCnUS92iofqTE0CJyWi72')",
+		},
+
+		"textos-publico": {
+			".write": "auth != null && (auth.uid == 'jMwvcOgUp1bQkll3Aq3zK12ihvX2' || auth.uid == 'aMafbpTHCnUS92iofqTE0CJyWi72')"
+		},
+		"textos-privado": {
+			".read": "auth != null && (auth.uid == 'jMwvcOgUp1bQkll3Aq3zK12ihvX2' || auth.uid == 'aMafbpTHCnUS92iofqTE0CJyWi72')",
+		},
+
+		"missoes": {
+			".write": "auth != null && (auth.uid == 'jMwvcOgUp1bQkll3Aq3zK12ihvX2' || auth.uid == 'aMafbpTHCnUS92iofqTE0CJyWi72')"
+		},
+		"monstros": {
+			".write": "auth != null && (auth.uid == 'jMwvcOgUp1bQkll3Aq3zK12ihvX2' || auth.uid == 'aMafbpTHCnUS92iofqTE0CJyWi72')"
+		}
+	}
+}

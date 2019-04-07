@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: e7dc35a6131731d479b44207791c6157
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Criatura_pronta_pintar2:polySurface2_Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface4_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface1
+    100004: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface10_Criatura_pronta_pintar2:polySurface11_Criatura_pronta_pintar2:polySurface1
+    100006: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface12_Criatura_pronta_pintar2:polySurface13_Criatura_pronta_pintar2:polySurface1
+    100008: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface6_Criatura_pronta_pintar2:polySurface7_Criatura_pronta_pintar2:polySurface1
+    100010: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface8_Criatura_pronta_pintar2:polySurface9_Criatura_pronta_pintar2:polySurface1
+    100012: Criatura_pronta_pintar2:pSphere1_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface14_Criatura_pronta_pintar2:polySurface15_Criatura_pronta_pintar2:polySurface16_Criatura_pronta_pintar2:polySurface1
+    100014: Criatura_pronta_pintar2:pSphere1_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface15_Criatura_pronta_pintar2:polySurface17_Criatura_pronta_pintar2:polySurface18_Criatura_pronta_pintar2:polySurface1
+    100016: pCylinder1
+    400000: //RootNode
+    400002: Criatura_pronta_pintar2:polySurface2_Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface4_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface1
+    400004: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface10_Criatura_pronta_pintar2:polySurface11_Criatura_pronta_pintar2:polySurface1
+    400006: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface12_Criatura_pronta_pintar2:polySurface13_Criatura_pronta_pintar2:polySurface1
+    400008: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface6_Criatura_pronta_pintar2:polySurface7_Criatura_pronta_pintar2:polySurface1
+    400010: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface8_Criatura_pronta_pintar2:polySurface9_Criatura_pronta_pintar2:polySurface1
+    400012: Criatura_pronta_pintar2:pSphere1_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface14_Criatura_pronta_pintar2:polySurface15_Criatura_pronta_pintar2:polySurface16_Criatura_pronta_pintar2:polySurface1
+    400014: Criatura_pronta_pintar2:pSphere1_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface15_Criatura_pronta_pintar2:polySurface17_Criatura_pronta_pintar2:polySurface18_Criatura_pronta_pintar2:polySurface1
+    400016: pCylinder1
+    2100000: Criatura_pronta_pintar2_polySurface2_Criatura_pronta_pintar2_polySurface3_Criatura_pronta_pintar2_polySurface4_Criatura_pronta_pintar2_polySurface5_Criatura_pronta_pintar2_polySurface1Mat
+    2100002: Criatura_pronta_pintar2_polySurface3_Criatura_pronta_pintar2_polySurface5_Criatura_pronta_pintar2_polySurface10_Criatura_pronta_pintar2_polySurface11_Criatura_pronta_pintar2_polySurface1Mat
+    2100004: Criatura_pronta_pintar2_polySurface3_Criatura_pronta_pintar2_polySurface5_Criatura_pronta_pintar2_polySurface12_Criatura_pronta_pintar2_polySurface13_Criatura_pronta_pintar2_polySurface1Mat
+    2100006: Criatura_pronta_pintar2_polySurface3_Criatura_pronta_pintar2_polySurface5_Criatura_pronta_pintar2_polySurface6_Criatura_pronta_pintar2_polySurface7_Criatura_pronta_pintar2_polySurface1Mat
+    2100008: Criatura_pronta_pintar2_polySurface3_Criatura_pronta_pintar2_polySurface5_Criatura_pronta_pintar2_polySurface8_Criatura_pronta_pintar2_polySurface9_Criatura_pronta_pintar2_polySurface1Mat
+    2100010: Criatura_pronta_pintar2_pSphere1_Criatura_pronta_pintar2_polySurface5_Criatura_pronta_pintar2_polySurface14_Criatura_pronta_pintar2_polySurface15_Criatura_pronta_pintar2_polySurface16_Criatura_pronta_pintar2_polySurface1Mat
+    2100012: Criatura_pronta_pintar2_pSphere1_Criatura_pronta_pintar2_polySurface5_Criatura_pronta_pintar2_polySurface15_Criatura_pronta_pintar2_polySurface17_Criatura_pronta_pintar2_polySurface18_Criatura_pronta_pintar2_polySurface1Mat
+    2100014: pCylinder1Mat
+    2300000: Criatura_pronta_pintar2:polySurface2_Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface4_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface1
+    2300002: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface10_Criatura_pronta_pintar2:polySurface11_Criatura_pronta_pintar2:polySurface1
+    2300004: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface12_Criatura_pronta_pintar2:polySurface13_Criatura_pronta_pintar2:polySurface1
+    2300006: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface6_Criatura_pronta_pintar2:polySurface7_Criatura_pronta_pintar2:polySurface1
+    2300008: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface8_Criatura_pronta_pintar2:polySurface9_Criatura_pronta_pintar2:polySurface1
+    2300010: Criatura_pronta_pintar2:pSphere1_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface14_Criatura_pronta_pintar2:polySurface15_Criatura_pronta_pintar2:polySurface16_Criatura_pronta_pintar2:polySurface1
+    2300012: Criatura_pronta_pintar2:pSphere1_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface15_Criatura_pronta_pintar2:polySurface17_Criatura_pronta_pintar2:polySurface18_Criatura_pronta_pintar2:polySurface1
+    2300014: pCylinder1
+    3300000: Criatura_pronta_pintar2:polySurface2_Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface4_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface1
+    3300002: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface10_Criatura_pronta_pintar2:polySurface11_Criatura_pronta_pintar2:polySurface1
+    3300004: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface12_Criatura_pronta_pintar2:polySurface13_Criatura_pronta_pintar2:polySurface1
+    3300006: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface6_Criatura_pronta_pintar2:polySurface7_Criatura_pronta_pintar2:polySurface1
+    3300008: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface8_Criatura_pronta_pintar2:polySurface9_Criatura_pronta_pintar2:polySurface1
+    3300010: Criatura_pronta_pintar2:pSphere1_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface14_Criatura_pronta_pintar2:polySurface15_Criatura_pronta_pintar2:polySurface16_Criatura_pronta_pintar2:polySurface1
+    3300012: Criatura_pronta_pintar2:pSphere1_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface15_Criatura_pronta_pintar2:polySurface17_Criatura_pronta_pintar2:polySurface18_Criatura_pronta_pintar2:polySurface1
+    3300014: pCylinder1
+    4300000: Criatura_pronta_pintar2:polySurface2_Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface4_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface1
+    4300002: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface10_Criatura_pronta_pintar2:polySurface11_Criatura_pronta_pintar2:polySurface1
+    4300004: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface12_Criatura_pronta_pintar2:polySurface13_Criatura_pronta_pintar2:polySurface1
+    4300006: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface6_Criatura_pronta_pintar2:polySurface7_Criatura_pronta_pintar2:polySurface1
+    4300008: Criatura_pronta_pintar2:polySurface3_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface8_Criatura_pronta_pintar2:polySurface9_Criatura_pronta_pintar2:polySurface1
+    4300010: Criatura_pronta_pintar2:pSphere1_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface14_Criatura_pronta_pintar2:polySurface15_Criatura_pronta_pintar2:polySurface16_Criatura_pronta_pintar2:polySurface1
+    4300012: Criatura_pronta_pintar2:pSphere1_Criatura_pronta_pintar2:polySurface5_Criatura_pronta_pintar2:polySurface15_Criatura_pronta_pintar2:polySurface17_Criatura_pronta_pintar2:polySurface18_Criatura_pronta_pintar2:polySurface1
+    4300014: pCylinder1
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Criatura_pronta_pintar2_pSphere1_Criatura_pronta_pintar2_polySurface5_Criatura_pronta_pintar2_polySurface14_Criatura_pronta_pintar2_polySurface15_Criatura_pronta_pintar2_polySurface16_Criatura_pronta_pintar2_polySurface1Mat
+    second: {fileID: 2100000, guid: 25caed3aa7683c24fb0dba3a160f81be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Criatura_pronta_pintar2_pSphere1_Criatura_pronta_pintar2_polySurface5_Criatura_pronta_pintar2_polySurface15_Criatura_pronta_pintar2_polySurface17_Criatura_pronta_pintar2_polySurface18_Criatura_pronta_pintar2_polySurface1Mat
+    second: {fileID: 2100000, guid: 25caed3aa7683c24fb0dba3a160f81be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Criatura_pronta_pintar2_polySurface2_Criatura_pronta_pintar2_polySurface3_Criatura_pronta_pintar2_polySurface4_Criatura_pronta_pintar2_polySurface5_Criatura_pronta_pintar2_polySurface1Mat
+    second: {fileID: 2100000, guid: 25caed3aa7683c24fb0dba3a160f81be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Criatura_pronta_pintar2_polySurface3_Criatura_pronta_pintar2_polySurface5_Criatura_pronta_pintar2_polySurface10_Criatura_pronta_pintar2_polySurface11_Criatura_pronta_pintar2_polySurface1Mat
+    second: {fileID: 2100000, guid: 25caed3aa7683c24fb0dba3a160f81be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Criatura_pronta_pintar2_polySurface3_Criatura_pronta_pintar2_polySurface5_Criatura_pronta_pintar2_polySurface12_Criatura_pronta_pintar2_polySurface13_Criatura_pronta_pintar2_polySurface1Mat
+    second: {fileID: 2100000, guid: 25caed3aa7683c24fb0dba3a160f81be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Criatura_pronta_pintar2_polySurface3_Criatura_pronta_pintar2_polySurface5_Criatura_pronta_pintar2_polySurface6_Criatura_pronta_pintar2_polySurface7_Criatura_pronta_pintar2_polySurface1Mat
+    second: {fileID: 2100000, guid: 25caed3aa7683c24fb0dba3a160f81be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Criatura_pronta_pintar2_polySurface3_Criatura_pronta_pintar2_polySurface5_Criatura_pronta_pintar2_polySurface8_Criatura_pronta_pintar2_polySurface9_Criatura_pronta_pintar2_polySurface1Mat
+    second: {fileID: 2100000, guid: 25caed3aa7683c24fb0dba3a160f81be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCylinder1Mat
+    second: {fileID: 2100000, guid: aeed447de01e32b43a7f3446cd3a9728, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.5
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="refresh" content="600">
+
+	<title>Souls Wizard</title>
+
+	<link rel="shortcut icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-purple.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+	<link rel="stylesheet" href="./styles/style.css">
+
+	<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+	<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+	<script src="./scripts/script.js"></script>
+
+</head>
+
+<body>
+	<!-- Notification -->
+	<div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+		
+		<div class="mdl-snackbar__text"></div>
+
+		<button type="button" class="mdl-snackbar__action"></button>
+
+	</div>
+	<!-- Notification - End -->
+
+	<!-- Login -->
+	<div id="page-login" class="background mdl-layout mdl-js-layout mdl-color--grey-100" style="align-items: center; justify-content: center; display: none;">
+		
+		<main class="mdl-layout__content" style="padding: 24px; flex: none;">
+
+			<div class="mdl-card mdl-shadow--6dp">
+
+				<div class="mdl-card__title mdl-color--purple mdl-color-text--white">
+
+					<h2 class="mdl-card__title-text">Souls Wizard</h2>
+
+				</div>
+
+				<div class="mdl-card__supporting-text">
+
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="email" id="email">
+						<label class="mdl-textfield__label" for="email">Email</label>
+					</div>
+
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="password" id="password">
+						<label class="mdl-textfield__label" for="password">Senha</label>
+					</div>
+
+				</div>
+
+				<div class="mdl-card__actions mdl-card--border">
+
+					<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="SignIn($('#email').val(), $('#password').val());">
+						ENTRAR
+					</button>
+
+					<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="mailto:grupo310games@gmail.com" style="float: right;">
+						CONTATO
+					</a>
+
+				</div>   
+
+			</div>
+		</main>
+	</div>
+	<!-- Login - End -->
+
+	<!-- Home -->
+	<div id="page-home" class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header" style="display: none;">
+
+		<header class="header mdl-layout__header mdl-color--purple mdl-color-text--white">
+
+			<div class="mdl-layout__header-row">
+
+				<span class="mdl-layout-title">Painel</span>
+
+				<div class="mdl-layout-spacer"></div>
+
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+
+					<label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+						<i class="material-icons">search</i>
+					</label>
+
+					<div class="mdl-textfield__expandable-holder">
+						<input class="mdl-textfield__input" type="text" id="search" onkeyup="">
+					</div>
+
+				</div>
+
+    <!--
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="options">
+        <i class="material-icons">more_vert</i>
+      </button>
+
+      <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="options">
+        <li class="mdl-menu__item">Option 1</li>
+        <li class="mdl-menu__item">Option 2</li>
+        <li class="mdl-menu__item">Option 3</li>
+      </ul>
+  -->
+
+</div>
+
+</header>
+
+<div class="background drawer mdl-layout__drawer mdl-color--purple mdl-color-text--white">
+
+	<header class="drawer-header">
+
+		<h4>Souls Wizard</h4>
+
+		<div class="avatar-dropdown">
+
+			<span id="user-email"></span>
+
+			<div class="mdl-layout-spacer"></div>
+
+			<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" onclick="SignOut();">
+				<i class="material-icons">logout</i>
+			</button>
+
+		</div>
+
+	</header>
+
+	<nav class="navigation mdl-navigation mdl-color--black mdl-color-text--white">
+
+		<a class="mdl-navigation__link mdl-color-text--white" href="">
+			<i class="mdl-color-text--white material-icons" role="presentation">
+				dashboard
+			</i>
+			Painel
+		</a>
+
+		<a class="mdl-navigation__link mdl-color-text--white" href="https://console.firebase.google.com/project/soulswizard/overview" target="_blank">
+			<i class="mdl-color-text--white material-icons" role="presentation">
+				dns
+			</i>
+			Firebase
+		</a>
+
+		<a class="mdl-navigation__link mdl-color-text--white" href="https://www.cvv.org.br/chat" target="_blank">
+			<i class="mdl-color-text--white material-icons" role="presentation">
+				call
+			</i>
+			Emergência
+		</a>
+
+		<div class="mdl-layout-spacer"></div>
+<!--
+		<a class="mdl-navigation__link mdl-color-text--white" href="https://tecwolf.com.br" target="_blank">
+			&copy; TecWolf 2019
+		</a>
+-->
+	</nav>
+
+</div>
+
+<main class="background mdl-layout__content mdl-color--grey-100">
+	
+	<div class="mdl-grid content">
+
+		<div class="charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+
+			<div class="card-wide mdl-card mdl-shadow--2dp" style="width: 100%">
+				
+				<div class="mdl-card__title" style="background: url('./images/earth.gif') center / cover;">
+					
+					<h2 class="mdl-card__title-text">BEM-VINDO</h2>
+
+				</div>
+				
+				<div class="mdl-card__actions mdl-card--border">
+					
+					<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="location.reload();">
+						ATUALIZAR
+					</a>
+
+					<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="mailto:email@tecwolf.com.br" style="float: right;">
+						CONTATO
+					</a>
+
+				</div>
+
+			</div>
+
+		</div>
+		
+	<!--
+		<div id="monstro" class="graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col">
+
+			<h3>MONSTROS</h3>
+
+			<p>Aguardando adição, atualização ou remoção:</p>
+
+			<div class="table-responsive">
+				<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 100%;">
+
+					<thead>
+
+						<tr>
+
+							<th class="mdl-data-table__cell--non-numeric" style="width: 50%;">Nome</th>
+
+							<th class="mdl-data-table__cell--non-numeric">Nível</th>
+
+							<th class="mdl-data-table__cell--non-numeric"></th>
+
+							<th class="mdl-data-table__cell--non-numeric"></th>
+
+							<th class="mdl-data-table__cell--non-numeric"></th>
+
+						</tr>
+
+					</thead>
+
+					<tbody id="monstro-lista">
+
+						<tr>
+
+							<td class="mdl-data-table__cell--non-numeric">
+
+								<div class="mdl-textfield mdl-js-textfield" style="width: 100%;">
+
+									<input class="mdl-textfield__input" type="text" id="monstro-nome" required>
+
+									<label class="mdl-textfield__label" for="monstro-nome">Nome</label>
+
+								</div>
+
+							</td>
+
+							<td class="mdl-data-table__cell--non-numeric">
+
+								<div class="mdl-textfield mdl-js-textfield" style="width: 75%;">
+
+									<input class="mdl-textfield__input" type="number" id="monstro-nivel" value="0" required>
+
+									<label class="mdl-textfield__label" for="monstro-nivel">Valor</label>
+
+								</div>
+
+							</td>
+
+							<td class="mdl-data-table__cell--non-numeric">
+								
+								<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" style="float: left;" onclick="CreateMonster($('#monstro-nome').val(), (parseInt($('#monstro-nivel').val()) - 1));">
+									CRIAR
+								</button>
+
+							</td>
+
+							<td></td>
+
+							<td></td>
+
+						</tr>
+
+					</tbody>
+
+				</table>
+
+			</div>
+
+		</div>
+	-->
+
+	<div id="missao" class="graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col">
+
+		<h3>MISSÕES</h3>
+
+		<p>Aguardando adição, atualização ou remoção:</p>
+
+		<div class="table-responsive">
+
+			<table id="tabela-missao" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 100%;">
+
+				<thead>
+
+					<tr>
+
+						<th class="mdl-data-table__cell--non-numeric" style="width: 30%;">Objetivo</th>
+
+						<th class="mdl-data-table__cell--non-numeric">Tipo</th>
+
+						<th class="mdl-data-table__cell--non-numeric">Valor</th>
+
+						<th class="mdl-data-table__cell--non-numeric">Nível</th>
+
+						<th class="mdl-data-table__cell--non-numeric">Conquista</th>
+
+						<th class="mdl-data-table__cell--non-numeric">Conquista Final</th>
+
+						<th class="mdl-data-table__cell--non-numeric">Dificuldade</th>
+
+						<th class="mdl-data-table__cell--non-numeric"></th>
+
+					</tr>
+
+				</thead>
+
+				<tbody id="missao-lista">
+					<tr>
+
+						<td class="mdl-data-table__cell--non-numeric">
+
+							<div class="mdl-textfield mdl-js-textfield" style="width: 100%;">
+
+								<input class="mdl-textfield__input" type="text" id="missao-objetivo" required>
+
+								<label class="mdl-textfield__label" for="missao-objetivo">Objetivo</label>
+
+							</div>
+
+						</td>
+
+						<td class="mdl-data-table__cell--non-numeric">
+
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 30%;">
+
+								<select class="mdl-textfield__input" id="missao-tipo" name="missao-tipo" required>
+
+									<option value="0">Foto</option>
+
+									<option value="1">Texto</option>
+
+									<option value="2">Caminhada</option>
+
+									<option value="3">Foto / Texto</option>
+
+								</select>
+
+							</div>
+
+						</td>
+
+						<td class="mdl-data-table__cell--non-numeric">
+
+							<div class="mdl-textfield mdl-js-textfield" style="width: 30%;">
+
+								<input class="mdl-textfield__input" type="number" id="missao-valor" value="0" required>
+
+								<label class="mdl-textfield__label" for="missao-valor">Valor</label>
+
+							</div>
+
+						</td>
+
+						<td class="mdl-data-table__cell--non-numeric">
+
+							<div class="mdl-textfield mdl-js-textfield" style="width: 30%;">
+
+								<input class="mdl-textfield__input" type="number" id="missao-nivel" value="0" required>
+
+								<label class="mdl-textfield__label" for="missao-nivel">Nível</label>
+
+							</div>
+
+						</td>
+
+						<td class="mdl-data-table__cell--non-numeric">
+
+							<div class="mdl-textfield mdl-js-textfield" style="width: 100%;">
+
+								<input class="mdl-textfield__input" type="text" id="missao-conquista" required>
+
+								<label class="mdl-textfield__label" for="missao-conquista">Conquista</label>
+
+							</div>
+
+						</td>
+
+						<td class="mdl-data-table__cell--non-numeric">
+
+							<div class="mdl-textfield mdl-js-textfield" style="width: 100%;">
+
+								<input class="mdl-textfield__input" type="text" id="missao-conquista-final" required>
+
+								<label class="mdl-textfield__label" for="missao-conquista-final">Conquista Final</label>
+
+							</div>
+
+						</td>
+
+						<td class="mdl-data-table__cell--non-numeric">
+
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 30%;">
+
+								<select class="mdl-textfield__input" id="missao-dificuldade" name="missao-dificuldade" required>
+
+									<option value="0">Fácil</option>
+
+									<option value="1">Médio</option>
+
+									<option value="2">Difícil</option>
+
+								</select>
+
+							</div>
+
+						</td>
+
+						<td>
+
+							<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" style="float: left;" onclick="CreateMission($('#missao-objetivo').val(), parseInt($('#missao-tipo').val()), parseInt($('#missao-valor').val()), (parseInt($('#missao-nivel').val()) - 1), $('#missao-conquista').val(), $('#missao-conquista-final').val(), parseInt($('#missao-dificuldade').val()));">
+								CRIAR
+							</button>
+
+						</td>
+
+					</tr>
+
+				</tbody>
+
+			</table>
+
+		</div>
+
+	</div>
+
+	<div id="galeria" class="graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col">
+
+		<h3>GALERIA</h3>
+
+		<p>Aguardando verificação:</p>
+
+		<div class="table-responsive">
+
+			<table id="tabela-galeria" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 100%;">
+
+				<thead>
+
+					<tr>
+
+						<th class="mdl-data-table__cell--non-numeric">Local</th>
+
+						<th class="mdl-data-table__cell--non-numeric">Usuário</th>
+
+						<th class="mdl-data-table__cell--non-numeric">Link</th>
+
+						<th class="mdl-data-table__cell--non-numeric"></th>
+
+						<th class="mdl-data-table__cell--non-numeric"></th>
+
+					</tr>
+
+				</thead>
+
+				<tbody id="galeria-lista"></tbody>
+
+			</table>
+
+		</div>
+
+	</div>
+
+	<div id="textos" class="graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col">
+
+		<h3>TEXTOS</h3>
+
+		<p>Aguardando verificação:</p>
+
+		<div class="table-responsive">
+
+			<table id="tabela-textos" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 100%;">
+
+				<thead>
+
+					<tr>
+
+						<th class="mdl-data-table__cell--non-numeric">Local</th>
+
+						<th class="mdl-data-table__cell--non-numeric">Usuário</th>
+
+						<th class="mdl-data-table__cell--non-numeric">Texto</th>
+
+						<th class="mdl-data-table__cell--non-numeric"></th>
+
+						<th class="mdl-data-table__cell--non-numeric"></th>
+
+					</tr>
+
+				</thead>
+
+				<tbody id="textos-lista"></tbody>
+
+			</table>
+
+		</div>
+
+	</div>
+
+</div>
+</main>
+</div>
+<!-- Home - End -->
+</body>
+</html>
