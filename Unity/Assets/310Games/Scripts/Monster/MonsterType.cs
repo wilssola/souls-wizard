@@ -17,14 +17,17 @@ public class MonsterType : MonoBehaviour {
 	void Update () {
         if (FirebaseController.SignedIn && FirebaseController.CreatedIn && !Checked)
         {
-            foreach(GameObject Go in Monsters)
+            foreach (GameObject Go in Monsters)
             {
                 Go.SetActive(false);
             }
 
-            Monsters[TecWolf.Player.PlayerMission.Level].SetActive(true);
+            if (!TecWolf.Player.PlayerMission.InMission)
+            {
+                Monsters[TecWolf.Player.PlayerMission.Level].SetActive(true);
 
-            Checked = true;
+                Checked = true;
+            }
         }
 	}
 }

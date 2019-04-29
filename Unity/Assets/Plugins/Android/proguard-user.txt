@@ -4,6 +4,7 @@
 -keep class com.yasirkula.unity.** { *; }
 
 -keep class com.google.firebase.** { *; }
+-keep class com.google.games.** { *; }
 
 -keep class com.mapbox.services.** { *; }
 -keep class net.sanukin.** { *; }

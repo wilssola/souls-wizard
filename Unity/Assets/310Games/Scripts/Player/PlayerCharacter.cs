@@ -15,6 +15,8 @@ namespace TecWolf.Player
         public static Material[] PlayerSkinMaterialStatic;
         public Material[] PlayerSkinMaterial;
 
+        static public bool Collision;
+
         private void Start()
         {
             PlayerColorStatic = new Color[PlayerColor.Length];
@@ -23,7 +25,10 @@ namespace TecWolf.Player
 
         private void Update()
         {
-            ApplyCharacter();
+            if (!Collision)
+            {
+                ApplyCharacter();
+            }
         }
 
         public void ApplyCharacter()

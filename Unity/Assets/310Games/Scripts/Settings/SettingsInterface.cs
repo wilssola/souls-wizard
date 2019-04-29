@@ -11,8 +11,11 @@ namespace TecWolf.Settings
 
         private void Start()
         {
-            Sounds = Convert.ToBoolean(PlayerPrefs.GetInt("Sounds", 1));
-            Buildings = Convert.ToBoolean(PlayerPrefs.GetInt("Buildings", 0));
+            if (PlayerPrefs.HasKey("Sounds") && PlayerPrefs.HasKey("Buildings"))
+            {
+                // Sounds = Convert.ToBoolean(PlayerPrefs.GetInt("Sounds", 1));
+                // Buildings = Convert.ToBoolean(PlayerPrefs.GetInt("Buildings", 0));
+            }
         }
 
         public void Update()
@@ -33,14 +36,14 @@ namespace TecWolf.Settings
         {
             Sounds = !Sounds;
 
-            PlayerPrefs.SetInt("Sounds", Convert.ToInt32(Sounds));
-
             AudioSource[] Audio = FindObjectsOfType<AudioSource>();
 
             foreach (AudioSource Go in Audio)
             {
                 Go.enabled = Sounds;
             }
+
+            PlayerPrefs.SetInt("Sounds", Convert.ToInt32(Sounds));
         }
 
         public void Building()

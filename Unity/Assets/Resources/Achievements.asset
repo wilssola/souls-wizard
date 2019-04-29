@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97784399620673f4c8b911c7d883ef2b, type: 3}
+  m_Name: Achievements
+  m_EditorClassIdentifier: 
+  definitions:
+  - name: NewAchievement
+    title: 
+    description: 
+    incompleteDescription: 
+    hidden: 0
+    type: 0
+    conditionBoolValue: 1
+    conditionIntValue: 1
+    conditionFloatValue: 1
+    progressChangeSize: 1
+    categoryId: 0
+  categories:
+  - id: 1
+    name: NewCategory
+  maxCatId: 2

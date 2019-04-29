@@ -19,7 +19,9 @@ namespace TecWolf.Player
         public PlayerInterface Interface;
         public PlayerAnimator Animation;
 
-        public GameObject PlayerModel, PlayerModelBuilding;
+        public GameObject  PlayerModelBuilding;
+
+        public GameObject[] PlayerModel;
 
         public static bool PlayerModelActive = true;
         public static DateTime Date = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Local);
@@ -187,7 +189,12 @@ namespace TecWolf.Player
         {
             if (Other.gameObject.tag == "Building")
             {
-                PlayerModel.SetActive(false);
+                PlayerCharacter.Collision = true;
+
+                foreach (GameObject Go in PlayerModel)
+                {
+                    Go.SetActive(false);
+                }
                 PlayerModelBuilding.SetActive(true);
 
                 PlayerModelActive = false;
@@ -198,7 +205,12 @@ namespace TecWolf.Player
         {
             if (Other.gameObject.tag == "Building")
             {
-                PlayerModel.SetActive(true);
+                PlayerCharacter.Collision = false;
+
+                foreach (GameObject Go in PlayerModel)
+                {
+                    Go.SetActive(true);
+                }
                 PlayerModelBuilding.SetActive(false);
 
                 PlayerModelActive = true;

@@ -46,10 +46,13 @@ namespace TecWolf.Monster
                     }
 
                     MonsterInterface.StaticMonsterUI.SetActive(true);
+                    MonsterInterface.Show();
 
                     Debug.Log("Missões Adquiridas!");
 
                     Missions.Clear();
+
+                    gameObject.SetActive(false);
                 }
 
                 Spawned = true;

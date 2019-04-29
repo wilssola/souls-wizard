@@ -1,0 +1,18 @@
+<!-- Copyright (C) 2018 Google Inc. All Rights Reserved.
+
+FirebaseCrashlytics iOS and Android Dependencies.
+-->
+
+<dependencies>
+  <iosPods>
+    <iosPod name="Fabric" version="1.9.0" minTargetSdk="7.0">
+    </iosPod>
+    <iosPod name="Crashlytics" version="3.12.0" minTargetSdk="7.0">
+    </iosPod>
+  </iosPods>
+  <androidPackages>
+    <androidPackage spec="com.crashlytics.sdk.android:crashlytics:2.9.9">
+    </androidPackage>
+  </androidPackages>
+</dependencies>
+

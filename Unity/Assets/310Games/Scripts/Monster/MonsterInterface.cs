@@ -28,6 +28,8 @@ namespace TecWolf.Monster
             {
                 MonstersModelsStatic[i] = MonstersModels[i];
             }
+
+            MonsterNoticeStatic = MonsterNotice;
         }
 
         public static void Show()
@@ -38,6 +40,7 @@ namespace TecWolf.Monster
             }
 
             // MonstersModelsStatic[Player.PlayerMission.Level].GetComponent<MeshRenderer>().material.SetColor("_Color", MonsterColor);
+
             MonstersModelsStatic[Player.PlayerMission.Level].SetActive(true);
 
             MonsterNoticeStatic.text = MonsterName + " FOI SUMONADO";

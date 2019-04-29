@@ -4,19 +4,22 @@
     <package>com.android.support:cardview-v7:25.3.1</package>
     <package>com.android.support:customtabs:25.3.1</package>
     <package>com.android.support:support-v4:25.3.1</package>
+    <package>com.crashlytics.sdk.android:crashlytics:2.9.9</package>
     <package>com.google.android.gms:play-services-auth:16+</package>
+    <package>com.google.auto.value:auto-value-annotations:1.6.3</package>
     <package>com.google.firebase:firebase-analytics:16.0.6</package>
     <package>com.google.firebase:firebase-analytics-unity:5.4.4</package>
-    <package>com.google.firebase:firebase-app-unity:5.4.4</package>
-    <package>com.google.firebase:firebase-auth:16.1.0</package>
-    <package>com.google.firebase:firebase-auth-unity:5.4.4</package>
-    <package>com.google.firebase:firebase-common:16.0.4</package>
+    <package>com.google.firebase:firebase-app-unity:5.6.1</package>
+    <package>com.google.firebase:firebase-auth:16.2.0</package>
+    <package>com.google.firebase:firebase-auth-unity:5.6.1</package>
+    <package>com.google.firebase:firebase-common:16.1.0</package>
     <package>com.google.firebase:firebase-core:16.0.6</package>
-    <package>com.google.firebase:firebase-database:16.0.5</package>
-    <package>com.google.firebase:firebase-database-unity:5.4.4</package>
+    <package>com.google.firebase:firebase-core:16.0.7</package>
+    <package>com.google.firebase:firebase-database:16.1.0</package>
+    <package>com.google.firebase:firebase-database-unity:5.6.1</package>
     <package>com.google.firebase:firebase-iid:[17.0.4]</package>
-    <package>com.google.firebase:firebase-storage:16.0.5</package>
-    <package>com.google.firebase:firebase-storage-unity:5.4.4</package>
+    <package>com.google.firebase:firebase-storage:16.1.0</package>
+    <package>com.google.firebase:firebase-storage-unity:5.6.1</package>
     <package>com.google.games:gpgs-plugin-support:0.9.62</package>
     <package>com.google.signin:google-signin-support:1.0.4</package>
   </packages>
@@ -36,6 +39,10 @@
     <file>Assets/Plugins/Android/com.android.support.support-media-compat-26.1.0.aar</file>
     <file>Assets/Plugins/Android/com.android.support.support-v4-26.1.0.aar</file>
     <file>Assets/Plugins/Android/com.android.support.support-vector-drawable-26.1.0.aar</file>
+    <file>Assets/Plugins/Android/com.crashlytics.sdk.android.answers-1.4.7.aar</file>
+    <file>Assets/Plugins/Android/com.crashlytics.sdk.android.beta-1.2.10.aar</file>
+    <file>Assets/Plugins/Android/com.crashlytics.sdk.android.crashlytics-2.9.9.aar</file>
+    <file>Assets/Plugins/Android/com.crashlytics.sdk.android.crashlytics-core-2.6.8.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-16.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-auth-16.0.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-auth-api-phone-16.0.0.aar</file>
@@ -45,29 +52,31 @@
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-drive-16.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-flags-16.0.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-games-16.0.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-api-16.0.4.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-16.0.5.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-api-16.3.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-16.3.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-nearby-16.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-stats-16.0.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-tasks-16.0.1.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-analytics-16.0.6.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-analytics-impl-16.2.4.aar</file>
+    <file>Assets/Plugins/Android/com.google.auto.value.auto-value-annotations-1.6.3.jar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-analytics-16.3.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-analytics-impl-16.3.0.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-analytics-unity-5.4.4.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-app-unity-5.4.4.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-auth-16.1.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-app-unity-5.6.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-auth-16.2.0.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-auth-interop-16.0.1.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-auth-unity-5.4.4.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-common-16.0.4.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-core-16.0.6.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-database-16.0.5.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-auth-unity-5.6.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-common-16.1.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-core-16.0.7.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-database-16.1.0.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-database-collection-16.0.1.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-database-unity-5.4.4.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-database-unity-5.6.1.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-iid-17.0.4.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-iid-interop-16.0.1.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-measurement-connector-17.0.1.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-measurement-connector-impl-17.0.4.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-storage-16.0.5.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-storage-unity-5.4.4.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-measurement-connector-impl-17.0.5.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-storage-16.1.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-storage-unity-5.6.1.aar</file>
     <file>Assets/Plugins/Android/com.google.games.gpgs-plugin-support-0.9.62.aar</file>
+    <file>Assets/Plugins/Android/io.fabric.sdk.android.fabric-1.4.8.aar</file>
   </files>
 </dependencies>

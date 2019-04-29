@@ -25,7 +25,11 @@ public class FirebaseController : MonoBehaviour
     public static bool SignedIn, CreatedIn;
     public static string UserId, UserEmail, UserName;
 
-    private void Awake()
+    public AchievementManager Manager;
+
+    public static AchievementManager ManagerStatic;
+
+    private void Start()
     {
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(Task =>
         {
@@ -41,16 +45,18 @@ public class FirebaseController : MonoBehaviour
                 Application.Quit();
             }
         });
+
+        ManagerStatic = Manager;
     }
 
     public void InitializeFirebase()
     {
-        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://soulswizard.firebaseio.com/");
-        DatabaseReference = FirebaseDatabase.DefaultInstance.RootReference;
-
         Auth = FirebaseAuth.DefaultInstance;
         Auth.StateChanged += AuthStateChanged;
         AuthStateChanged(this, null);
+
+        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://soulswizard.firebaseio.com/");
+        DatabaseReference = FirebaseDatabase.DefaultInstance.RootReference;
 
         Storage = FirebaseStorage.DefaultInstance;
         StorageReference = Storage.GetReferenceFromUrl("gs://soulswizard.appspot.com");
@@ -338,9 +344,11 @@ public class FirebaseController : MonoBehaviour
                     {
                         if (Convert.ToBoolean(ChildSnapshot.Child("concluida").Value) == true)
                         {
-                            PlayGames.ReportProgress(ChildSnapshot.Child("conquista").ToString());
+                            // PlayGames.ReportProgress(ChildSnapshot.Child("conquista").ToString());
 
-                            TecWolf.Player.PlayerMission.FinalAchievement = ChildSnapshot.Child("conquista_final").ToString();
+                            ManagerStatic.UnlockAchievement((AchievementID)System.Enum.Parse(typeof(AchievementID), ChildSnapshot.Child("conquista").Value.ToString()));
+
+                            TecWolf.Player.PlayerMission.FinalAchievement = ChildSnapshot.Child("conquista_final").Value.ToString();
                         }
 
                         if (Convert.ToBoolean(ChildSnapshot.Child("verificada").Value) == true)
@@ -385,7 +393,9 @@ public class FirebaseController : MonoBehaviour
 
                         TecWolf.Player.PlayerMission.LevelChange = false;
 
-                        PlayGames.ReportProgress(TecWolf.Player.PlayerMission.FinalAchievement);
+                        // PlayGames.ReportProgress(TecWolf.Player.PlayerMission.FinalAchievement);
+
+                        ManagerStatic.UnlockAchievement((AchievementID)System.Enum.Parse(typeof(AchievementID), TecWolf.Player.PlayerMission.FinalAchievement));
 
                         TecWolf.Monster.MonsterFinalInterface.StaticMonsterUI.SetActive(true);
                         TecWolf.Monster.MonsterFinalInterface.Show();
@@ -458,6 +468,8 @@ public class FirebaseController : MonoBehaviour
 
                         List.Add(NewMission);
                         Debug.Log("Missão adicionada a Lista de Missões.");
+
+                        ManagerStatic.UnlockAchievement((AchievementID)System.Enum.Parse(typeof(AchievementID), ChildSnapshot.Child("conquista").Value.ToString()));
                     }
                 }
             }

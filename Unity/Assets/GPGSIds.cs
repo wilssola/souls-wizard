@@ -25,8 +25,9 @@
 public static class GPGSIds
 {
         public const string achievement_exploradora_nato = "CgkI37u62b4cEAIQAw"; // <GPGSID>
-        public const string achievement_sbio_de_bom_grado = "CgkI37u62b4cEAIQAg"; // <GPGSID>
+        public const string achievement_meu_amuleto_da_sorte = "CgkI37u62b4cEAIQBg"; // <GPGSID>
         public const string achievement_espelho_espelho_meu = "CgkI37u62b4cEAIQBQ"; // <GPGSID>
+        public const string achievement_sbio_abenoado = "CgkI37u62b4cEAIQAg"; // <GPGSID>
         public const string achievement_aprendiz_de_feiticeiroa = "CgkI37u62b4cEAIQAQ"; // <GPGSID>
         public const string achievement_evocadora_de_qualidades = "CgkI37u62b4cEAIQBA"; // <GPGSID>
 

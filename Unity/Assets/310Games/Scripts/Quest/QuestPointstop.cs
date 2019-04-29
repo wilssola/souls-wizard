@@ -138,5 +138,12 @@ namespace TecWolf.Quest
             QuestPhoto.TakePictureMission(4096, "Nenhum", PointstopID);
         }
 
+        public void OnTriggerEnter(Collider Other)
+        {
+            if (Other.gameObject.tag == "Building")
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

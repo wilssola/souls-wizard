@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
+using UnityEngine.SocialPlatforms;
 using UnityEngine;
 
 public class PlayGames : MonoBehaviour {
-
-    private void Awake () {
+    
+    private void Start()
+    {
         // Create client configuration
         PlayGamesClientConfiguration Config = new PlayGamesClientConfiguration.Builder().Build();
 
@@ -15,18 +17,21 @@ public class PlayGames : MonoBehaviour {
         // Initialize and activate the platform
         PlayGamesPlatform.InitializeInstance(Config);
         PlayGamesPlatform.Activate();
-    }
 
-    private void Start()
-    {
+        /*
         if (!PlayGamesPlatform.Instance.localUser.authenticated)
         {
             PlayGamesPlatform.Instance.Authenticate(SignInCallback, false);
         }
         else
         {
-            PlayGamesPlatform.Instance.SignOut();
+            // PlayGamesPlatform.Instance.SignOut();
         }
+        */
+
+        Social.localUser.Authenticate((bool Success) => {
+            Debug.Log("Social: " + Success);
+        });
     }
 
     public void SignInCallback(bool Success)
