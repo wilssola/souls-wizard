@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.unity3d.player" xmlns:tools="http://schemas.android.com/tools" android:installLocation="preferExternal" android:versionCode="1" android:versionName="1.0">
+  <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:anyDensity="true" />
+  <application android:icon="@drawable/app_icon" android:label="@string/app_name" android:debuggable="true">
+    <activity android:name="net.sanukin.OverrideUnityActivity" android:label="@string/app_name" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:name="com.facebook.unity.FBUnityLoginActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+    <activity android:name="com.facebook.unity.FBUnityDialogsActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+    <activity android:name="com.facebook.unity.FBUnityAppLinkActivity" android:exported="true" />
+    <activity android:name="com.facebook.unity.FBUnityDeepLinkingActivity" android:exported="true" />
+    <activity android:name="com.facebook.unity.FBUnityGameRequestActivity" />
+    <activity android:name="com.facebook.unity.FBUnityCreateGameGroupActivity" />
+    <activity android:name="com.facebook.unity.FBUnityJoinGameGroupActivity" />
+    <activity android:name="com.facebook.unity.AppInviteDialogActivity" />
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="fb546273442552583" />
+    <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="true" />
+    <meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="true" />
+    <provider android:name="com.facebook.FacebookContentProvider" android:authorities="com.facebook.app.FacebookContentProvider546273442552583" android:exported="true" />
+    <provider android:name="com.yasirkula.unity.NativeCameraContentProvider" android:authorities="com.games310.soulswizard" android:exported="false" android:grantUriPermissions="true" />
+  </application>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_CONTACTS" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-feature android:name="android.hardware.screen.portrait"/>
+  <uses-feature android:name="android.hardware.camera" android:required="true" />
+  <uses-feature android:name="android.hardware.location" android:required="true" />
+  <uses-feature android:name="android.hardware.location.gps" android:required="true" />
+  <uses-feature android:name="android.hardware.location.network" android:required="true" />
+</manifest>

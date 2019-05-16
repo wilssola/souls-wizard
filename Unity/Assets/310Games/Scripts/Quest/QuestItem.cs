@@ -108,5 +108,10 @@ namespace TecWolf.Quest
                 FindObjectOfType<QuestInterface>().Refresh();
             }
         }
+
+        public void OpenMic()
+        {
+            Player.PlayerInterface.MicInterface.SetActive(true);
+        }
     }
 }

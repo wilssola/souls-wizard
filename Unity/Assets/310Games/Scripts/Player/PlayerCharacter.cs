@@ -12,6 +12,9 @@ namespace TecWolf.Player
         public GameObject[] PlayerModelsFemale;
         public GameObject[] PlayerModelsMale;
 
+        public GameObject[] PlayerModelsFemaleSkin;
+        public GameObject[] PlayerModelsMaleSkin;
+
         public static Material[] PlayerSkinMaterialStatic;
         public Material[] PlayerSkinMaterial;
 
@@ -46,35 +49,93 @@ namespace TecWolf.Player
             {
                 Go.SetColor("_Color", PlayerColorStatic[PlayerSkin]);
             }
-
-            foreach (GameObject Go in PlayerModelsMale)
+            if (Player.PlayerMission.Level == 0)
             {
-                if (PlayerGender == 0)
+
+                foreach (GameObject Go in PlayerModelsMale)
                 {
-                    if (!Go.activeSelf)
+                    if (PlayerGender == 0)
                     {
-                        Go.SetActive(true);
+                        if (!Go.activeSelf)
+                        {
+                            Go.SetActive(true);
+                        }
+                    }
+                    else
+                    {
+                        Go.SetActive(false);
                     }
                 }
-                else
+
+                foreach (GameObject Go in PlayerModelsFemale)
+                {
+                    if (PlayerGender == 1)
+                    {
+                        if (!Go.activeSelf)
+                        {
+                            Go.SetActive(true);
+                        }
+                    }
+                    else
+                    {
+                        Go.SetActive(false);
+                    }
+                }
+
+                foreach (GameObject Go in PlayerModelsMaleSkin)
                 {
                     Go.SetActive(false);
                 }
+
+                foreach (GameObject Go in PlayerModelsFemaleSkin)
+                {
+                    Go.SetActive(false);
+                }
+
             }
-
-            foreach (GameObject Go in PlayerModelsFemale)
+            else
             {
-                if (PlayerGender == 1)
+
+                foreach (GameObject Go in PlayerModelsMaleSkin)
                 {
-                    if (!Go.activeSelf)
+                    if (PlayerGender == 0)
                     {
-                        Go.SetActive(true);
+                        if (!Go.activeSelf)
+                        {
+                            Go.SetActive(true);
+                        }
+                    }
+                    else
+                    {
+                        Go.SetActive(false);
                     }
                 }
-                else
+
+                foreach (GameObject Go in PlayerModelsFemaleSkin)
+                {
+                    if (PlayerGender == 1)
+                    {
+                        if (!Go.activeSelf)
+                        {
+                            Go.SetActive(true);
+                        }
+                    }
+                    else
+                    {
+                        Go.SetActive(false);
+                    }
+                }
+
+                foreach (GameObject Go in PlayerModelsMale)
                 {
                     Go.SetActive(false);
                 }
+
+                foreach (GameObject Go in PlayerModelsFemale)
+                {
+                    Go.SetActive(false);
+                }
+
             }
         }
     }

@@ -3502,7 +3502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterID: 0
-  MonsterName: Baixa Autoestima
+  MonsterName: Narcisa
 --- !u!114 &114715239204082728
 MonoBehaviour:
   m_ObjectHideFlags: 1

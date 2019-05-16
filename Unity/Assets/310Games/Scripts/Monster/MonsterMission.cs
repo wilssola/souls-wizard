@@ -52,7 +52,10 @@ namespace TecWolf.Monster
 
                     Missions.Clear();
 
-                    gameObject.SetActive(false);
+                    if (GetComponent<MonsterController>().First != true)
+                    {
+                        gameObject.SetActive(false);
+                    }
                 }
 
                 Spawned = true;

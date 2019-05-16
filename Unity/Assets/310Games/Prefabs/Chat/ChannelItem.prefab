@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.29411766, a: 1}
+  m_Color: {r: 0.098039225, g: 0, b: 0.29411766, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -337,7 +337,7 @@ MonoBehaviour:
   ChannelCreator: {fileID: 114872769995484066}
   ChannelButton: {fileID: 114907794352538658}
   ChannelReference:
-    IDChannel: 
+    ChanneId: 
     Creator: 
     Title: 
     Date: 

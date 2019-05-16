@@ -45,7 +45,9 @@ namespace TecWolf.Monster
 
             MonsterNoticeStatic.text = MonsterName + " FOI SUMONADO";
 
-            System.SystemSound.Effect.PlayOneShot(System.SystemSound.SoundsStatic[2]);
+            System.SystemSound.Effect.PlayOneShot(System.SystemSound.MonsterSoundsStatic[0]);
+
+            FirebaseController.WriteDataInt("/usuarios/" + FirebaseController.UserId, "humor", 2);
         }
 
         public void HumourButton()

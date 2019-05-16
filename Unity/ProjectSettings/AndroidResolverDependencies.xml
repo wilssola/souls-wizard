@@ -5,7 +5,6 @@
     <package>com.android.support:customtabs:25.3.1</package>
     <package>com.android.support:support-v4:25.3.1</package>
     <package>com.crashlytics.sdk.android:crashlytics:2.9.9</package>
-    <package>com.google.android.gms:play-services-auth:16+</package>
     <package>com.google.auto.value:auto-value-annotations:1.6.3</package>
     <package>com.google.firebase:firebase-analytics:16.0.6</package>
     <package>com.google.firebase:firebase-analytics-unity:5.4.4</package>
@@ -21,7 +20,6 @@
     <package>com.google.firebase:firebase-storage:16.1.0</package>
     <package>com.google.firebase:firebase-storage-unity:5.6.1</package>
     <package>com.google.games:gpgs-plugin-support:0.9.62</package>
-    <package>com.google.signin:google-signin-support:1.0.4</package>
   </packages>
   <files>
     <file>Assets/Plugins/Android/android.arch.core.common-1.0.0.jar</file>

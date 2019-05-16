@@ -10,6 +10,8 @@ using Firebase.Auth;
 using Firebase.Storage;
 using Firebase.Database;
 using Firebase.Unity.Editor;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class FirebaseController : MonoBehaviour
 {
@@ -28,6 +30,8 @@ public class FirebaseController : MonoBehaviour
     public AchievementManager Manager;
 
     public static AchievementManager ManagerStatic;
+
+    public static bool WritedInt;
 
     private void Start()
     {
@@ -51,12 +55,14 @@ public class FirebaseController : MonoBehaviour
 
     public void InitializeFirebase()
     {
+#if UNITY_EDITOR
+        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://soulswizard.firebaseio.com/");
+#endif
+        DatabaseReference = FirebaseDatabase.DefaultInstance.RootReference;
+
         Auth = FirebaseAuth.DefaultInstance;
         Auth.StateChanged += AuthStateChanged;
         AuthStateChanged(this, null);
-
-        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://soulswizard.firebaseio.com/");
-        DatabaseReference = FirebaseDatabase.DefaultInstance.RootReference;
 
         Storage = FirebaseStorage.DefaultInstance;
         StorageReference = Storage.GetReferenceFromUrl("gs://soulswizard.appspot.com");
@@ -67,7 +73,21 @@ public class FirebaseController : MonoBehaviour
 
     public static void WriteDataInt(string Directory, string Child, int Value)
     {
-        FirebaseDatabase.DefaultInstance.GetReference(Directory).Child(Child).SetValueAsync(Value);
+        FirebaseDatabase.DefaultInstance.GetReference(Directory).Child(Child).SetValueAsync(Value).ContinueWith(Task =>
+        {
+            if (Task.IsCompleted)
+            {
+                WritedInt = true;
+
+                Debug.Log("Escrita 5: " + WritedInt);
+            }
+            else
+            {
+                WritedInt = false;
+
+                Debug.Log("Escrita 6: " + WritedInt);
+            }
+        });
     }
     public static void WriteDataFloat(string Directory, string Child, float Value)
     {
@@ -82,6 +102,26 @@ public class FirebaseController : MonoBehaviour
         FirebaseDatabase.DefaultInstance.GetReference(Directory).Child(Child).SetValueAsync(Value);
     }
 
+    public void Update()
+    {
+        /*
+        FirebaseDatabase.DefaultInstance.GetReference("conectado").GetValueAsync().ContinueWith(Task =>
+        {
+            DataSnapshot Snapshot = Task.Result;
+
+            if (Convert.ToBoolean(Snapshot.Value) != true)
+            {
+                Debug.Log("Desconectado do Firebase Realtime");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+            else
+            {
+                Debug.Log("Conectado ao Firebase Realtime");
+            }
+        });
+        */
+    }
+
     public static void CheckUserCharacter(bool FirstTime)
     {
         FirebaseDatabase.DefaultInstance.GetReference("/usuarios/" + UserId + "/personagem/").GetValueAsync().ContinueWith(Task =>
@@ -94,12 +134,12 @@ public class FirebaseController : MonoBehaviour
             {
                 DataSnapshot Snapshot = Task.Result;
 
-                if (FirstTime)
-                {
-                    Debug.Log("Personagem Criado: " + Snapshot.Child("criado").Value.ToString());
+                // if (FirstTime)
+                // {
+                Debug.Log("Personagem Criado: " + Snapshot.Child("criado").Value.ToString());
 
-                    CreatedIn = Convert.ToBoolean(Snapshot.Child("criado").Value);
-                }
+                CreatedIn = Convert.ToBoolean(Snapshot.Child("criado").Value);
+                // }
 
                 if (CreatedIn)
                 {
@@ -108,12 +148,11 @@ public class FirebaseController : MonoBehaviour
                     TecWolf.Player.PlayerCharacter.PlayerGender = Convert.ToInt32(Snapshot.Child("sexo").Value);
                 }
 
-                    // Debug.Log("Nível: " + TecWolf.Player.PlayerMission.Level);
-                    // Debug.Log("Sexo: " + PlayerCharacter.PlayerGender);
-                    // Debug.Log("Cor: " + PlayerCharacter.PlayerSkin);
-                }
+                // Debug.Log("Nível: " + TecWolf.Player.PlayerMission.Level);
+                // Debug.Log("Sexo: " + PlayerCharacter.PlayerGender);
+                // Debug.Log("Cor: " + PlayerCharacter.PlayerSkin);
+            }
         });
-
 
         FirebaseDatabase.DefaultInstance.GetReference("/usuarios/" + UserId).GetValueAsync().ContinueWith(Task =>
         {
@@ -127,23 +166,30 @@ public class FirebaseController : MonoBehaviour
 
                 bool LevelEqual = false;
 
-                if (Convert.ToBoolean(Snapshot.Child("tipo").Value) != false)
+                /* 
+                if (Convert.ToBoolean(Snapshot.Child("tipo").Value) == false)
                 {
-                    foreach (var ChildSnapshot in Snapshot.Child("tipo").Children)
-                    {
-                        if (Convert.ToInt32(ChildSnapshot.Value) == TecWolf.Player.PlayerMission.Level)
-                        {
-                            LevelEqual = true;
-                        }
-                    }
+                    LevelEqual = true;
+                }
+                */
 
-                    if (!LevelEqual && TecWolf.Player.PlayerMission.Level < 9)
+                foreach (var ChildSnapshot in Snapshot.Child("tipo").Children)
+                {
+                    if (Convert.ToInt32(ChildSnapshot.Value) == TecWolf.Player.PlayerMission.Level)
+                    {
+                        LevelEqual = true;
+                    }
+                }
+
+                if (!LevelEqual && TecWolf.Player.PlayerMission.Level < 9)
+                {
+                    if (CreatedIn)
                     {
                         WriteDataInt("/usuarios/" + UserId + "/personagem/", "nivel", TecWolf.Player.PlayerMission.Level + 1);
                     }
-
-                    LevelEqual = false;
                 }
+
+                LevelEqual = false;
 
                 TecWolf.Player.PlayerMission.Difficulty = Convert.ToInt32(Snapshot.Child("dificuldade").Value);
             }
@@ -346,7 +392,10 @@ public class FirebaseController : MonoBehaviour
                         {
                             // PlayGames.ReportProgress(ChildSnapshot.Child("conquista").ToString());
 
-                            ManagerStatic.UnlockAchievement((AchievementID)System.Enum.Parse(typeof(AchievementID), ChildSnapshot.Child("conquista").Value.ToString()));
+                            if (ChildSnapshot.Child("conquista").Value.ToString() != "" || ChildSnapshot.Child("conquista").Value.ToString() != null)
+                            {
+                                ManagerStatic.UnlockAchievement((AchievementID)System.Enum.Parse(typeof(AchievementID), ChildSnapshot.Child("conquista").Value.ToString()));
+                            }
 
                             TecWolf.Player.PlayerMission.FinalAchievement = ChildSnapshot.Child("conquista_final").Value.ToString();
                         }
@@ -376,47 +425,45 @@ public class FirebaseController : MonoBehaviour
 
                         TotalMissions = TotalMissions + 1;
 
-                        LevelID = Convert.ToInt32(ChildSnapshot.Child("nivel").Value);
+                        // Debug.Log("Nível Missões: " + LevelID);
+                        // Debug.Log("Nível Monstro: " + MonsterID);
                     }
                 }
 
-                    // Debug.Log("Total: " + (TotalMissions).ToString());
-                    // Debug.Log("Verificadas: " + (VerifiedMissions).ToString());
+                // Debug.Log("Total: " + (TotalMissions).ToString());
+                // Debug.Log("Verificadas: " + (VerifiedMissions).ToString());
 
-                    if (VerifiedMissions == TotalMissions && TotalMissions > 0 && LevelID == MonsterID)
+                // Debug.Log(TecWolf.Player.PlayerMission.LevelChange);
+
+                if ((VerifiedMissions == TotalMissions) && (TotalMissions > 0 && VerifiedMissions > 0) && (TecWolf.Player.PlayerMission.Level == MonsterID))
                 {
-                    if (TecWolf.Player.PlayerMission.LevelChange)
+                    Debug.Log("Escrita 1: " + WritedInt);
+
+                    TecWolf.Monster.MonsterFinalInterface.StaticMonsterUI.SetActive(true);
+                    TecWolf.Monster.MonsterFinalInterface.Show();
+
+                    TecWolf.System.SystemSound.Effect.PlayOneShot(TecWolf.System.SystemSound.MonsterSoundsStatic[0]);
+
+                    // PlayGames.ReportProgress(TecWolf.Player.PlayerMission.FinalAchievement);
+
+                    TecWolf.Player.PlayerMission.Level = TecWolf.Player.PlayerMission.Level + 1;
+                    TecWolf.System.SystemInterface.Alert("Você passou para o Nível " + (TecWolf.Player.PlayerMission.Level + 1).ToString());
+
+                    if (!WritedInt)
                     {
-                        WriteDataInt("/usuarios/" + UserId + "/personagem/", "nivel", TecWolf.Player.PlayerMission.Level + 1);
-
-                        TecWolf.System.SystemSound.Effect.PlayOneShot(TecWolf.System.SystemSound.SoundsStatic[1]);
-
-                        TecWolf.Player.PlayerMission.LevelChange = false;
-
-                        // PlayGames.ReportProgress(TecWolf.Player.PlayerMission.FinalAchievement);
-
-                        ManagerStatic.UnlockAchievement((AchievementID)System.Enum.Parse(typeof(AchievementID), TecWolf.Player.PlayerMission.FinalAchievement));
-
-                        TecWolf.Monster.MonsterFinalInterface.StaticMonsterUI.SetActive(true);
-                        TecWolf.Monster.MonsterFinalInterface.Show();
+                        WriteDataInt("/usuarios/" + UserId + "/personagem/", "nivel", TecWolf.Player.PlayerMission.Level);
                     }
 
-                    FirebaseDatabase.DefaultInstance.GetReference("/usuarios/" + UserId + "/personagem/").GetValueAsync().ContinueWith(TaskChild =>
+                    Debug.Log("Escrita 2: " + WritedInt);
+
+                    TecWolf.Player.PlayerMission.LevelChange = false;
+
+                    if (TecWolf.Player.PlayerMission.FinalAchievement != "" || TecWolf.Player.PlayerMission.FinalAchievement != null)
                     {
-                        if (TaskChild.IsFaulted)
-                        {
+                        ManagerStatic.UnlockAchievement((AchievementID)System.Enum.Parse(typeof(AchievementID), TecWolf.Player.PlayerMission.FinalAchievement));
+                    }
 
-                        }
-                        else if (TaskChild.IsCompleted)
-                        {
-                            DataSnapshot SnapshotChild = Task.Result;
-
-                            if (TecWolf.Player.PlayerMission.Level == Convert.ToInt32(SnapshotChild.Child("nivel").Value))
-                            {
-                                TecWolf.Player.PlayerMission.LevelChange = true;
-                            }
-                        }
-                    });
+                    Debug.Log("Escrita 3: " + WritedInt);
                 }
 
                 if (TotalMissions > 0)
@@ -430,6 +477,12 @@ public class FirebaseController : MonoBehaviour
 
                 TotalMissions = 0;
                 VerifiedMissions = 0;
+            }
+
+            if (WritedInt)
+            {
+                WritedInt = false;
+                Debug.Log("Escrita 4: " + WritedInt);
             }
         });
     }
@@ -514,6 +567,8 @@ public class FirebaseController : MonoBehaviour
                 Debug.Log("Firebase Auth - " + User.UserId + " deslogado.");
 
                 TecWolf.System.SystemInterface.Alert("Deslogado com sucesso.");
+
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
 
             User = Auth.CurrentUser;
@@ -528,7 +583,7 @@ public class FirebaseController : MonoBehaviour
                 UserName = User.DisplayName ?? "";
                 UserEmail = User.Email ?? "";
 
-                UserPhoto = User.PhotoUrl ?? null;
+                // UserPhoto = User.PhotoUrl ?? null;
 
                 CheckUserCharacter(true);
             }
@@ -679,18 +734,18 @@ public class FirebaseController : MonoBehaviour
                 if (task.IsCanceled)
                 {
                     Debug.LogError("Firebase Auth - UpdateUserProfileAsync foi cancelado.");
-                    TecWolf.System.SystemInterface.Alert("A atualização de conta foi cancelada.");
+                    // TecWolf.System.SystemInterface.Alert("A atualização de conta foi cancelada.");
                     return;
                 }
                 if (task.IsFaulted)
                 {
                     Debug.LogError("Firebase Auth - UpdateUserProfileAsync encontrou um erro: " + task.Exception);
-                    TecWolf.System.SystemInterface.Alert("Erro ao atualizar conta.");
+                    // TecWolf.System.SystemInterface.Alert("Erro ao atualizar conta.");
                     return;
                 }
 
                 Debug.Log("Firebase Auth - Usuário atualizado com sucesso.");
-                TecWolf.System.SystemInterface.Alert("Conta atualizada com sucesso.");
+                // TecWolf.System.SystemInterface.Alert("Conta atualizada com sucesso.");
             });
         }
     }

@@ -10,9 +10,22 @@ namespace TecWolf.System
         public AudioClip[] Sounds;
         public static AudioClip[] SoundsStatic;
 
+        public AudioClip[] MonsterSounds;
+        public AudioClip[] MonsterSoundsFinal;
+        public static AudioClip[] MonsterSoundsStatic;
+
         private void Start()
         {
             SetSound();
+        }
+
+        private void Update()
+        {
+            if (Player.PlayerMission.Level < MonsterSoundsStatic.Length)
+            {
+                MonsterSoundsStatic[0] = MonsterSounds[Player.PlayerMission.Level];
+                MonsterSoundsStatic[1] = MonsterSoundsFinal[Player.PlayerMission.Level];
+            }
         }
 
         public void SetSound()
@@ -26,6 +39,8 @@ namespace TecWolf.System
             {
                 SoundsStatic[i] = Sounds[i];
             }
+
+            MonsterSoundsStatic = new AudioClip[MonsterSounds.Length];
         }
     }
 }

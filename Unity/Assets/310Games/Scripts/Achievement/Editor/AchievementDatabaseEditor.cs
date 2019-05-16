@@ -30,7 +30,6 @@ public class AchievementDatabaseEditor : Editor {
         string code = "public enum " + ENUM_NAME + " {\n";
         foreach (AchievementClass achievement in database.achievements)
         {
-            //TODO: Validate the id is proper format
             code += "\t" + achievement.id + ",\n";
         }
         code += "}\n";

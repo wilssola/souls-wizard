@@ -9,7 +9,7 @@ namespace TecWolf.Player
 
         public Text FramesText, SpeedText;
 
-        public static GameObject PointstopBar;
+        public static GameObject PointstopBar, MicInterface;
 
         public Image LevelBar;
         public Text LevelText;
@@ -17,8 +17,10 @@ namespace TecWolf.Player
         private void Start()
         {
             PointstopBar = GameObject.Find("PointstopBar");
+            MicInterface = GameObject.Find("Mic (Enabled)");
 
             PointstopBar.SetActive(false);
+            MicInterface.SetActive(false);
         }
 
         private void Update()

@@ -80,7 +80,7 @@ namespace TecWolf.Chat
             {
                 if (!string.IsNullOrEmpty(NewChannelName.text))
                 {
-                    FirebaseController.CreaterChannelDataBase(NewChannelName.text, UserName.text);
+                    FirebaseController.CreaterChannelDataBase(NewChannelName.text, FirebaseController.UserName);
                     NewChannelName.text = "";
                     FirebaseController.GetChannelsDatabase(Channels);
 
@@ -98,7 +98,7 @@ namespace TecWolf.Chat
             {
                 if (!string.IsNullOrEmpty(ChatInput.text))
                 {
-                    FirebaseController.CreateMessage(ChannelReferenceSelected.ChanneId, UserName.text, ChatInput.text);
+                    FirebaseController.CreateMessage(ChannelReferenceSelected.ChanneId, FirebaseController.UserName, ChatInput.text);
                     ChatInput.text = "";
                 }
             });

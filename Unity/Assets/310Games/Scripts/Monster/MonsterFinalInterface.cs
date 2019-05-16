@@ -41,18 +41,13 @@ namespace TecWolf.Monster
 
             // MonstersModelsStatic[Player.PlayerMission.Level].GetComponent<MeshRenderer>().material.SetColor("_Color", MonsterColor);
 
-            if (Player.PlayerMission.Level > 0)
-            {
-                MonstersModelsStatic[Player.PlayerMission.Level - 1].SetActive(true);
-            }
-            else
-            {
-                MonstersModelsStatic[Player.PlayerMission.Level].SetActive(true);
-            }
-
+            MonstersModelsStatic[Player.PlayerMission.Level].SetActive(true);
+            
             // MonsterNoticeStatic.text = MonsterName + " FOI SUMONADO";
 
-            System.SystemSound.Effect.PlayOneShot(System.SystemSound.SoundsStatic[2]);
+            System.SystemSound.Effect.PlayOneShot(System.SystemSound.MonsterSoundsStatic[1]);
+
+            FirebaseController.WriteDataInt("/usuarios/" + FirebaseController.UserId, "humor", 2);
         }
 
         public void HumourButton()

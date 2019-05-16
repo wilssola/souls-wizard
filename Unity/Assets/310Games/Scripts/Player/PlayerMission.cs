@@ -29,6 +29,7 @@ namespace TecWolf.Player
             {
                 int LocalLevel = Level;
                 System.SystemInterface.Alert("Você passou para o Nível " + (LocalLevel + 1).ToString() + ".");
+                LevelChange = false;
             }
         }
     }

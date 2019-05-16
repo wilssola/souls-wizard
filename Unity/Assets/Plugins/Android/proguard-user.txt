@@ -8,3 +8,6 @@
 
 -keep class com.mapbox.services.** { *; }
 -keep class net.sanukin.** { *; }
+
+-keep class cn.easyar.engine.** { *; }
+-keep class cn.easyar.engine.EasyAR { *; }

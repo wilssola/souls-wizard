@@ -30,12 +30,12 @@ namespace TecWolf.Monster
                 transform.localPosition = Map.GeoToWorldPosition(Location, true);
                 transform.localPosition = new Vector3(transform.localPosition.x, 1.25f, transform.localPosition.z);
 
-                Spawned = true;
+                // Spawned = true;
             }
 
             if (Vector3.Distance(Player.transform.position, transform.position) > 12.5f || TecWolf.Player.PlayerMission.InMission || (TecWolf.Player.PlayerMission.Level > GetComponent<MonsterMission>().MonsterID && TecWolf.Player.PlayerMission.Level < 10))
             {
-                gameObject.SetActive(false);
+                // gameObject.SetActive(false);
             }
         }
     }

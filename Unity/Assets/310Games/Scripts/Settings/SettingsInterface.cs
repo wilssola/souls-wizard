@@ -29,7 +29,10 @@ namespace TecWolf.Settings
         public void SignOut()
         {
             FirebaseController.AuthQuit();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            // DestroyImmediate(GameObject.Find("Firebase Services"));
+
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         public void Sound()

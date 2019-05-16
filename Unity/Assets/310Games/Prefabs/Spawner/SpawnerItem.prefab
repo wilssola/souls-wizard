@@ -54,7 +54,6 @@ MonoBehaviour:
   SpawnRadius: 5
   Monsters:
   - {fileID: 1229723112006778, guid: 196eb52f79dfbca4f9c2aae77faea9b5, type: 2}
-  - {fileID: 1229723112006778, guid: e3b0de4d44385e64a9cd359aaee38d08, type: 2}
   - {fileID: 1229723112006778, guid: e1044a702692bad4399abacb9519794e, type: 2}
   - {fileID: 1229723112006778, guid: 2ffed446fd48cb145b3434c161b462f6, type: 2}
   - {fileID: 1229723112006778, guid: 882e1c0a717bad546a2b7ba5380d4c24, type: 2}

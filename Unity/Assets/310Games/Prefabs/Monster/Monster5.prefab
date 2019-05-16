@@ -323,8 +323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc3215cc6a5e8640a37674976e348e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterID: 4
-  MonsterName: "Ins\xF4nia"
+  MonsterID: 3
+  MonsterName: "Gr\xE3o"
 --- !u!114 &114715239204082728
 MonoBehaviour:
   m_ObjectHideFlags: 1

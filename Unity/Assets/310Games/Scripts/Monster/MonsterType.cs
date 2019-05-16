@@ -2,32 +2,48 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterType : MonoBehaviour {
+public class MonsterType : MonoBehaviour
+{
 
     public GameObject[] Monsters;
 
     private bool Checked;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (FirebaseController.SignedIn && FirebaseController.CreatedIn && !Checked)
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (FirebaseController.SignedIn && /* FirebaseController.CreatedIn && */ !Checked && TecWolf.Player.PlayerMission.Level < Monsters.Length)
         {
-            foreach (GameObject Go in Monsters)
+            for (int i = 0; i < Monsters.Length; i++)
             {
-                Go.SetActive(false);
+                if (i != TecWolf.Player.PlayerMission.Level)
+                {
+                    Monsters[i].SetActive(false);
+                }
             }
 
             if (!TecWolf.Player.PlayerMission.InMission)
             {
                 Monsters[TecWolf.Player.PlayerMission.Level].SetActive(true);
-
-                Checked = true;
+            }
+            else
+            {
+                Monsters[TecWolf.Player.PlayerMission.Level].SetActive(false);
             }
         }
-	}
+
+        if(TecWolf.Player.PlayerMission.Level == 9)
+        {
+            foreach(GameObject Go in Monsters)
+            {
+                Go.SetActive(false);
+            }
+        }
+    }
 }

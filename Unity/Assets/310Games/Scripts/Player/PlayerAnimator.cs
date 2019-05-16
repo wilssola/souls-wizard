@@ -14,7 +14,13 @@ namespace TecWolf.Player
 
             if (PlayerController.PlayerModelActive)
             {
-                Animation[PlayerCharacter.PlayerGender].SetBool("Moving", Moving);
+                foreach (Animator Go in Animation)
+                {
+                    if (Go.gameObject.activeSelf)
+                    {
+                        Go.SetBool("Moving", Moving);
+                    }
+                }
             }
         }
     }
