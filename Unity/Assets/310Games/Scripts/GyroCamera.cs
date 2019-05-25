@@ -15,7 +15,11 @@ public class GyroCamera : MonoBehaviour
     public GameObject[] MonsterParent;
     private GameObject MonsterModel;
 
+    public GameObject[] PlayerUI;
+
     private bool UseGyro;
+
+    private int ParentNumber;
 
     void Start()
     {
@@ -65,6 +69,8 @@ public class GyroCamera : MonoBehaviour
             {
                 if (MonsterParent[i].activeSelf && MonsterModel == null)
                 {
+                    ParentNumber = i;
+
                     for (int j = 0; j < MonsterParent[i].transform.childCount; j++)
                     {
                         if (MonsterParent[i].transform.GetChild(j).gameObject.activeSelf == true)
@@ -84,6 +90,11 @@ public class GyroCamera : MonoBehaviour
             {
                 Go.SetActive(false);
             }
+
+            foreach (GameObject Go in PlayerUI)
+            {
+                Go.SetActive(false);
+            }
         }
         else
         {
@@ -98,6 +109,8 @@ public class GyroCamera : MonoBehaviour
             {
                 Go.SetActive(true);
             }
+
+            PlayerUI[0].SetActive(true);
 
             Webcam.SetActive(false);
 

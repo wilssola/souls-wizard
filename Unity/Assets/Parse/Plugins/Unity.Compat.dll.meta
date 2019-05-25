@@ -25,11 +25,6 @@ PluginImporter:
       settings:
         CPU: AnyCPU
   - first:
-      '': SamsungTV
-    second:
-      enabled: 1
-      settings: {}
-  - first:
       '': Web
     second:
       enabled: 1
@@ -48,7 +43,7 @@ PluginImporter:
   - first:
       Any: 
     second:
-      enabled: 0
+      enabled: 1
       settings: {}
   - first:
       Editor: Editor
@@ -68,26 +63,6 @@ PluginImporter:
       enabled: 1
       settings:
         CPU: AnyCPU
-  - first:
-      Nintendo 3DS: N3DS
-    second:
-      enabled: 1
-      settings: {}
-  - first:
-      Nintendo Switch: Switch
-    second:
-      enabled: 1
-      settings: {}
-  - first:
-      PS4: PS4
-    second:
-      enabled: 1
-      settings: {}
-  - first:
-      PSP2: PSP2
-    second:
-      enabled: 1
-      settings: {}
   - first:
       Standalone: Linux
     second:
@@ -125,31 +100,11 @@ PluginImporter:
       settings:
         CPU: AnyCPU
   - first:
-      Tizen: Tizen
-    second:
-      enabled: 1
-      settings: {}
-  - first:
-      WebGL: WebGL
-    second:
-      enabled: 1
-      settings: {}
-  - first:
-      WiiU: WiiU
-    second:
-      enabled: 1
-      settings: {}
-  - first:
       Windows Store Apps: WindowsStoreApps
     second:
       enabled: 1
       settings:
         CPU: AnyCPU
-  - first:
-      XboxOne: XboxOne
-    second:
-      enabled: 1
-      settings: {}
   - first:
       iPhone: iOS
     second:
@@ -157,11 +112,6 @@ PluginImporter:
       settings:
         CompileFlags: 
         FrameworkDependencies: 
-  - first:
-      tvOS: tvOS
-    second:
-      enabled: 1
-      settings: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

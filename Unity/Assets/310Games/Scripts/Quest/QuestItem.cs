@@ -11,6 +11,8 @@ namespace TecWolf.Quest
         public Button TextButton, GalleryButton, CameraButton;
         public InputField TextInput;
 
+        public Button VerifyButton;
+
         public string MissionID, MissionName, MissionType, MissionValue, MissionTotal, MissionComplete, MissionVerify, MissionAchievementOne, MissionAchievementTwo, Difficulty;
 
         private void Start()
@@ -35,6 +37,8 @@ namespace TecWolf.Quest
             if (Convert.ToBoolean(MissionComplete))
             {
                 QuestComplete.text = "Concluída";
+
+                VerifyButton.gameObject.SetActive(true);
             }
             else
             {
@@ -68,6 +72,8 @@ namespace TecWolf.Quest
             if (Convert.ToBoolean(MissionVerify))
             {
                 QuestVerify.text = "Verificada";
+
+                VerifyButton.gameObject.SetActive(false);
             }
             else
             {
@@ -112,6 +118,15 @@ namespace TecWolf.Quest
         public void OpenMic()
         {
             Player.PlayerInterface.MicInterface.SetActive(true);
+        }
+
+        public void SetVerify()
+        {
+            FirebaseController.WriteDataBool("/usuarios/" + FirebaseController.UserId + "/missoes/" + MissionID, "verificada", true);
+
+            TecWolf.System.SystemSound.Effect.PlayOneShot(TecWolf.System.SystemSound.SoundsStatic[0]);
+
+            FindObjectOfType<QuestInterface>().Refresh();
         }
     }
 }

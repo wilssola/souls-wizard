@@ -31,7 +31,7 @@ android {
 	buildToolsVersion '**BUILDTOOLS**'
 
 	defaultConfig {
-		versionCode 7
+		versionCode **VERSIONCODE**
 		minSdkVersion **MINSDKVERSION**
 		targetSdkVersion **TARGETSDKVERSION**
 		applicationId '**APPLICATIONID**'

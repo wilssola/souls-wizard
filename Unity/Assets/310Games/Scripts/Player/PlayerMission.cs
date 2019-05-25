@@ -4,7 +4,7 @@ namespace TecWolf.Player
 {
     public class PlayerMission : MonoBehaviour
     {
-        public static int Level = 0;
+        public static int Level = 9;
         public static int Difficulty = 0;
 
         public static bool InMission = true;

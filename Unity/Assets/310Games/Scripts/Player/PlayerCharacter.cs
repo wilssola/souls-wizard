@@ -135,7 +135,6 @@ namespace TecWolf.Player
                 {
                     Go.SetActive(false);
                 }
-
             }
         }
     }

@@ -22,6 +22,8 @@ namespace TecWolf.Video
         public VideoPlayer CutscenePlayer;
         public VideoClip[] CutsceneClip;
 
+        public GameObject Music;
+
         public static bool CutscenePlay;
 
         // Use this for initialization
@@ -47,6 +49,8 @@ namespace TecWolf.Video
                     CutscenePlayer.clip = CutsceneClip[Player.PlayerCharacter.PlayerGender];
                     CutscenePlayer.Play();
                 }
+
+                Music.SetActive(false);
             }
             else
             {
@@ -54,6 +58,8 @@ namespace TecWolf.Video
                 {
                     Go.SetActive(false);
                 }
+
+                Music.SetActive(true);
             }
 
             if (FirebaseController.CreatedIn && FirebaseController.SignedIn && !CutscenePlay)

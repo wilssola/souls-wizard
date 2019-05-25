@@ -449,6 +449,11 @@ public class FirebaseController : MonoBehaviour
                     TecWolf.Player.PlayerMission.Level = TecWolf.Player.PlayerMission.Level + 1;
                     TecWolf.System.SystemInterface.Alert("Você passou para o Nível " + (TecWolf.Player.PlayerMission.Level + 1).ToString());
 
+                    if (TecWolf.Player.PlayerMission.Level == 1)
+                    {
+                        TecWolf.System.SystemSound.Effect.PlayOneShot(TecWolf.System.SystemSound.SoundsStatic[3]);
+                    }
+
                     if (!WritedInt)
                     {
                         WriteDataInt("/usuarios/" + UserId + "/personagem/", "nivel", TecWolf.Player.PlayerMission.Level);

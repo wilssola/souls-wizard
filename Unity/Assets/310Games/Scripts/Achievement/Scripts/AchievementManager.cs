@@ -15,8 +15,8 @@ public class AchievementManager : MonoBehaviour {
 
     public AchievementID achievementToShow;
 
-    [SerializeField][HideInInspector]
-    private List<AchievementItemController> achievementItems;
+    [SerializeField]
+    public List<AchievementItemController> achievementItems;
 
     private void Start()
     {
@@ -43,6 +43,11 @@ public class AchievementManager : MonoBehaviour {
     [ContextMenu("LoadAchievementsTable()")]
     private void LoadAchievementsTable()
     {
+        foreach (Transform child in scrollViewContent.transform)
+        {
+            // DestroyImmediate(child.gameObject);
+        }
+
         foreach (AchievementItemController item in achievementItems)
         {
             DestroyImmediate(item.gameObject);

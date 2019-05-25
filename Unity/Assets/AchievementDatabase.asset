@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d864c5156f4346429856829af2718e8, type: 3}
+  m_Name: AchievementDatabase
+  m_EditorClassIdentifier: 
+  achievements:
+    array:
+    - id: CgkI37u62b4cEAIQAQ
+      title: Aprendiz de Feiticeiro(a)
+      description: "Encatador(a)! Deu seu primeiro passo rumo \xE0 verdadeira for\xE7a
+        interior!"
+    - id: CgkI37u62b4cEAIQAg
+      title: "S\xE1bio Aben\xE7oado"
+      description: "Agradeceu boas pr\xE1ticas exercidas ou recebidas durante o dia"
+    - id: CgkI37u62b4cEAIQAw
+      title: Explorador(a) Nato!
+      description: "Visitou lugares e vivenciou experi\xEAncias curiosas"
+    - id: CgkI37u62b4cEAIQBA
+      title: Evocador(a) de Qualidades
+      description: "Descobriu um pouco mais sobre si mesmo \u2665"
+    - id: CgkI37u62b4cEAIQBg
+      title: Meu amuleto da sorte
+      description: "Um objeto de poder consagrado ou n\xE3o magicamente, usado ou
+        carregado para prote\xE7\xE3o contra o mal, m\xE1 sorte e infort\xFAnios gerais.
+        Do Latim \u201Cmeio de defesa\u201D."
