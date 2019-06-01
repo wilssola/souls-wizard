@@ -1,0 +1,295 @@
+fileFormatVersion: 2
+guid: cf9e14f44ac9b55439ef4f694ac4cca4
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Ik_Handle_Narcisa
+    100004: ikHandle18
+    100006: ikHandle19
+    100008: ikHandle20
+    100010: ikHandle21
+    100012: ikHandle22
+    100014: ikHandle23
+    100016: ikHandle24
+    100018: ikHandle25
+    100020: ikHandle26
+    100022: ikHandle27
+    100024: ikHandle28
+    100026: ikHandle29
+    100028: joint1
+    100030: joint10
+    100032: joint11
+    100034: joint12
+    100036: joint13
+    100038: joint14
+    100040: joint15
+    100042: joint16
+    100044: joint17
+    100046: joint18
+    100048: joint19
+    100050: joint2
+    100052: joint20
+    100054: joint21
+    100056: joint22
+    100058: joint23
+    100060: joint24
+    100062: joint25
+    100064: joint26
+    100066: joint27
+    100068: joint28
+    100070: joint29
+    100072: joint3
+    100074: joint30
+    100076: joint31
+    100078: joint32
+    100080: joint33
+    100082: joint34
+    100084: joint35
+    100086: joint36
+    100088: joint37
+    100090: joint37 1
+    100092: joint38
+    100094: joint38 1
+    100096: joint39
+    100098: joint39 1
+    100100: joint4
+    100102: joint40
+    100104: joint41
+    100106: joint42
+    100108: joint43
+    100110: joint44
+    100112: joint45
+    100114: joint46
+    100116: joint47
+    100118: joint48
+    100120: joint49
+    100122: joint5
+    100124: joint54
+    100126: joint55
+    100128: joint56
+    100130: joint57
+    100132: joint6
+    100134: joint7
+    100136: joint8
+    100138: joint9
+    100140: locator1
+    100142: locator2
+    100144: Master_Ctrl
+    100146: Master_Ctrl_GRP
+    100148: Narcisa
+    100150: Narcisa_Provisoria
+    100152: nurbsCircle1
+    100154: nurbsCircle2
+    100156: Pata_Dir_Frente_Ctrl
+    100158: Pata_Dir_Frente_Ctrl_GRP
+    100160: Pata_Dir_traz_Ctrl
+    100162: Pata_Dir_traz_Ctrl_GRP
+    100164: Pata_Esq_Frente_Ctrl
+    100166: Pata_Esq_Frente_Ctrl_GRP
+    100168: Pata_Esq_traz_Ctrl
+    100170: Pata_Esq_traz_Ctrl_GRP
+    400000: //RootNode
+    400002: Ik_Handle_Narcisa
+    400004: ikHandle18
+    400006: ikHandle19
+    400008: ikHandle20
+    400010: ikHandle21
+    400012: ikHandle22
+    400014: ikHandle23
+    400016: ikHandle24
+    400018: ikHandle25
+    400020: ikHandle26
+    400022: ikHandle27
+    400024: ikHandle28
+    400026: ikHandle29
+    400028: joint1
+    400030: joint10
+    400032: joint11
+    400034: joint12
+    400036: joint13
+    400038: joint14
+    400040: joint15
+    400042: joint16
+    400044: joint17
+    400046: joint18
+    400048: joint19
+    400050: joint2
+    400052: joint20
+    400054: joint21
+    400056: joint22
+    400058: joint23
+    400060: joint24
+    400062: joint25
+    400064: joint26
+    400066: joint27
+    400068: joint28
+    400070: joint29
+    400072: joint3
+    400074: joint30
+    400076: joint31
+    400078: joint32
+    400080: joint33
+    400082: joint34
+    400084: joint35
+    400086: joint36
+    400088: joint37
+    400090: joint37 1
+    400092: joint38
+    400094: joint38 1
+    400096: joint39
+    400098: joint39 1
+    400100: joint4
+    400102: joint40
+    400104: joint41
+    400106: joint42
+    400108: joint43
+    400110: joint44
+    400112: joint45
+    400114: joint46
+    400116: joint47
+    400118: joint48
+    400120: joint49
+    400122: joint5
+    400124: joint54
+    400126: joint55
+    400128: joint56
+    400130: joint57
+    400132: joint6
+    400134: joint7
+    400136: joint8
+    400138: joint9
+    400140: locator1
+    400142: locator2
+    400144: Master_Ctrl
+    400146: Master_Ctrl_GRP
+    400148: Narcisa
+    400150: Narcisa_Provisoria
+    400152: nurbsCircle1
+    400154: nurbsCircle2
+    400156: Pata_Dir_Frente_Ctrl
+    400158: Pata_Dir_Frente_Ctrl_GRP
+    400160: Pata_Dir_traz_Ctrl
+    400162: Pata_Dir_traz_Ctrl_GRP
+    400164: Pata_Esq_Frente_Ctrl
+    400166: Pata_Esq_Frente_Ctrl_GRP
+    400168: Pata_Esq_traz_Ctrl
+    400170: Pata_Esq_traz_Ctrl_GRP
+    2100000: lambert2
+    4300000: Narcisa_Provisoria
+    7400000: 1_GAME_FINAL
+    9500000: //RootNode
+    13700000: Narcisa_Provisoria
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: 25caed3aa7683c24fb0dba3a160f81be, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: 1_GAME_FINAL
+      takeName: 1_GAME_FINAL
+      firstFrame: 1
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 10
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -43,7 +43,7 @@ namespace TecWolf.Monster
 
             MonstersModelsStatic[Player.PlayerMission.Level].SetActive(true);
 
-            MonsterNoticeStatic.text = MonsterName + " FOI SUMONADO";
+            MonsterNoticeStatic.text = MonsterName + " FOI LOCALIZADO";
 
             System.SystemSound.Effect.PlayOneShot(System.SystemSound.MonsterSoundsStatic[0]);
 

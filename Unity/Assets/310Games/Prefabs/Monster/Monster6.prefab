@@ -56,13 +56,14 @@ GameObject:
   - component: {fileID: 114715239204082728}
   - component: {fileID: 114498015436010542}
   - component: {fileID: 65756477547193334}
+  - component: {fileID: 114370219359329668}
   m_Layer: 0
   m_Name: Monster6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1325439686107626
 GameObject:
   m_ObjectHideFlags: 1
@@ -155,7 +156,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1229723112006778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4186908373548680}
@@ -312,6 +313,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2.5, z: 2.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114370219359329668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1229723112006778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee753af849a97443a3c8acd166e5be6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Map: {fileID: 0}
+  Location:
+    x: 0
+    y: 0
 --- !u!114 &114498015436010542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -323,8 +339,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc3215cc6a5e8640a37674976e348e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterID: 4
-  MonsterName: Ruivo
+  MonsterID: 5
+  MonsterName: Titanic
 --- !u!114 &114715239204082728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -337,7 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Particle: {fileID: 198946207320036730}
-  First: 0
+  First: 1
 --- !u!198 &198166560363767716
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1264,8 +1280,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.99607843, g: 0.5882353, b: 1, a: 1}
-        key1: {r: 1, g: 0, b: 0.8901961, a: 1}
+        key0: {r: 0.38431373, g: 0.38431373, b: 1, a: 1}
+        key1: {r: 0, g: 0, b: 0.5294118, a: 1}
         key2: {r: 0, g: 1, b: 0.3372549, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -3634,7 +3650,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1444675947490860}
   serializedVersion: 5
-  lengthInSec: 1
+  lengthInSec: 15
   simulationSpeed: 1
   stopAction: 0
   looping: 0
@@ -4610,8 +4626,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9843137, g: 0, b: 1, a: 0}
-        key1: {r: 0.41568628, g: 0, b: 0.56078434, a: 0.77254903}
+        key0: {r: 0, g: 1, b: 1, a: 0}
+        key1: {r: 0.6862745, g: 1, b: 1, a: 0.77254903}
         key2: {r: 0.15294118, g: 0.2, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -7016,7 +7032,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1735305241301934}
   serializedVersion: 5
-  lengthInSec: 1
+  lengthInSec: 15
   simulationSpeed: 1
   stopAction: 0
   looping: 0
@@ -7069,7 +7085,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1604531617
+  randomSeed: -2008563284
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -8016,8 +8032,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0, b: 0.92941177, a: 1}
-        key1: {r: 0.7019608, g: 0, b: 0.7137255, a: 1}
+        key0: {r: 0.6862745, g: 1, b: 1, a: 1}
+        key1: {r: 0, g: 1, b: 1, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -10422,7 +10438,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829419198711118}
   serializedVersion: 5
-  lengthInSec: 1
+  lengthInSec: 15
   simulationSpeed: 1
   stopAction: 0
   looping: 0
@@ -10475,7 +10491,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -243248225
+  randomSeed: -519980757
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -11353,17 +11369,17 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 0}
-        key1: {r: 1, g: 0, b: 0.84705883, a: 0.5176471}
-        key2: {r: 0.61960787, g: 0, b: 0.79607844, a: 0}
+        key0: {r: 0, g: 1, b: 1, a: 0}
+        key1: {r: 0.6862745, g: 1, b: 1, a: 0.77254903}
+        key2: {r: 0.15294118, g: 0.2, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 31418
-        ctime2: 65535
+        ctime1: 42791
+        ctime2: 61680
         ctime3: 0
         ctime4: 0
         ctime5: 0
@@ -11378,7 +11394,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 3
+        m_NumColorKeys: 2
         m_NumAlphaKeys: 3
       minGradient:
         serializedVersion: 2
@@ -12966,7 +12982,7 @@ ParticleSystem:
     enabled: 1
     subEmitters:
     - serializedVersion: 2
-      emitter: {fileID: 198177899986154424}
+      emitter: {fileID: 0}
       type: 0
       properties: 0
   LightsModule:
@@ -14760,8 +14776,8 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 0, b: 0.8901961, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
+        key1: {r: 0, g: 0, b: 0.5294118, a: 1}
+        key2: {r: 1, g: 0, b: 0.8901961, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -14769,7 +14785,7 @@ ParticleSystem:
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
         ctime1: 65535
-        ctime2: 0
+        ctime2: 65535
         ctime3: 0
         ctime4: 0
         ctime5: 0

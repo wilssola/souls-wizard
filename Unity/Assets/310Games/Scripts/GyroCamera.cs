@@ -7,7 +7,7 @@ public class GyroCamera : MonoBehaviour
 
     private Quaternion RotationFix;
 
-    public GameObject Webcam;
+    public GameObject[] Webcam;
 
     public GameObject[] Backgrounds;
     public GameObject[] Buttons;
@@ -30,7 +30,7 @@ public class GyroCamera : MonoBehaviour
 
         Input.gyro.enabled = true;
 
-        Parent.transform.rotation = Quaternion.Euler(0f, -180f, 180f);
+        Parent.transform.rotation = Quaternion.Euler(0f, -180f, 0f);
 
         RotationFix = new Quaternion(0f, 0f, 1f, 0f);
 
@@ -38,7 +38,10 @@ public class GyroCamera : MonoBehaviour
         {
             Input.gyro.enabled = true;
 
-            Webcam.SetActive(true);
+            foreach (GameObject Go in Webcam)
+            {
+                Go.SetActive(true);
+            }
         }
         else
         {
@@ -63,7 +66,10 @@ public class GyroCamera : MonoBehaviour
                 Go.SetActive(false);
             }
 
-            Webcam.SetActive(true);
+            foreach (GameObject Go in Webcam)
+            {
+                Go.SetActive(true);
+            }
 
             for (int i = 0; i < MonsterParent.Length; i++)
             {
@@ -77,7 +83,7 @@ public class GyroCamera : MonoBehaviour
                         {
                             MonsterModel = Instantiate(MonsterParent[i].transform.GetChild(j).gameObject);
 
-                            MonsterModel.transform.position = new Vector3(0f, 1.25f, -3.5f);
+                            MonsterModel.transform.position = new Vector3(0f, 1.75f, -5f);
                             MonsterModel.transform.localScale = new Vector3(1, 1, 1);
 
                             MonsterModel.transform.rotation = new Quaternion(0, 0, 0, 0);
@@ -112,7 +118,10 @@ public class GyroCamera : MonoBehaviour
 
             PlayerUI[0].SetActive(true);
 
-            Webcam.SetActive(false);
+            foreach (GameObject Go in Webcam)
+            {
+                Go.SetActive(false);
+            }
 
             Destroy(MonsterModel);
         }

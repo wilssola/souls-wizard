@@ -49,7 +49,8 @@ namespace TecWolf.Player
             {
                 Go.SetColor("_Color", PlayerColorStatic[PlayerSkin]);
             }
-            if (Player.PlayerMission.Level == 0)
+
+            if (Player.PlayerMission.Level == 0 && PlayerController.PlayerModelActive)
             {
 
                 foreach (GameObject Go in PlayerModelsMale)
@@ -82,59 +83,76 @@ namespace TecWolf.Player
                     }
                 }
 
+                DisableModelsSkins();
+            }
+            else if(PlayerController.PlayerModelActive)
+            {
+
                 foreach (GameObject Go in PlayerModelsMaleSkin)
                 {
-                    Go.SetActive(false);
+                    if (PlayerGender == 0)
+                    {
+                        if (!Go.activeSelf)
+                        {
+                            Go.SetActive(true);
+                        }
+                    }
+                    else
+                    {
+                        Go.SetActive(false);
+                    }
                 }
 
                 foreach (GameObject Go in PlayerModelsFemaleSkin)
                 {
-                    Go.SetActive(false);
+                    if (PlayerGender == 1)
+                    {
+                        if (!Go.activeSelf)
+                        {
+                            Go.SetActive(true);
+                        }
+                    }
+                    else
+                    {
+                        Go.SetActive(false);
+                    }
                 }
+
+                DisableModels();
+            }
+
+            if(!PlayerController.PlayerModelActive)
+            {
+
+                DisableModels();
+                DisableModelsSkins();
 
             }
-            else
+        }
+
+        private void DisableModels()
+        {
+            foreach (GameObject Go in PlayerModelsMale)
             {
+                Go.SetActive(false);
+            }
 
-                foreach (GameObject Go in PlayerModelsMaleSkin)
-                {
-                    if (PlayerGender == 0)
-                    {
-                        if (!Go.activeSelf)
-                        {
-                            Go.SetActive(true);
-                        }
-                    }
-                    else
-                    {
-                        Go.SetActive(false);
-                    }
-                }
+            foreach (GameObject Go in PlayerModelsFemale)
+            {
+                Go.SetActive(false);
+            }
+        }
 
-                foreach (GameObject Go in PlayerModelsFemaleSkin)
-                {
-                    if (PlayerGender == 1)
-                    {
-                        if (!Go.activeSelf)
-                        {
-                            Go.SetActive(true);
-                        }
-                    }
-                    else
-                    {
-                        Go.SetActive(false);
-                    }
-                }
+        private void DisableModelsSkins()
+        {
+            foreach (GameObject Go in PlayerModelsMaleSkin)
+            {
+                Go.SetActive(false);
+            }
 
-                foreach (GameObject Go in PlayerModelsMale)
-                {
-                    Go.SetActive(false);
-                }
-
-                foreach (GameObject Go in PlayerModelsFemale)
-                {
-                    Go.SetActive(false);
-                }
+            foreach (GameObject Go in PlayerModelsFemaleSkin)
+            {
+                Go.SetActive(false);
             }
         }
     }
