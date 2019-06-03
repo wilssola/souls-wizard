@@ -13,6 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   achievements:
     array:
+    - id: Default
+      title: Bem vindo
+      description: Conquista desbloqueada
     - id: CgkI37u62b4cEAIQAQ
       title: Aprendiz de Feiticeiro(a)
       description: "Encatador(a)! Deu seu primeiro passo rumo \xE0 verdadeira for\xE7a
@@ -31,3 +34,21 @@ MonoBehaviour:
       description: "Um objeto de poder consagrado ou n\xE3o magicamente, usado ou
         carregado para prote\xE7\xE3o contra o mal, m\xE1 sorte e infort\xFAnios gerais.
         Do Latim \u201Cmeio de defesa\u201D."
+    - id: CgkI37u62b4cEAIQBQ
+      title: Espelho, espelho meu...
+      description: "Existe algu\xE9m mais \xFAnico do que eu?"
+    - id: CgkI37u62b4cEAIQBw
+      title: Apreciador(a)
+      description: "Exibiu op\xE7\xF5es variadas no menu."
+    - id: CgkI37u62b4cEAIQCA
+      title: Purificado(a)
+      description: "Se manteve hidratado o quanto p\xF4de! Continue assim."
+    - id: CgkI37u62b4cEAIQCQ
+      title: Mestre em Herbologia!
+      description: "Experimentou a arte da cozinha saud\xE1vel!"
+    - id: CgkI37u62b4cEAIQCg
+      title: Masterchef
+      description: "Exibiu dotes culin\xE1rios."
+    - id: CgkI37u62b4cEAIQCw
+      title: "Faminto por mudan\xE7a!"
+      description: Tudo posso naquilo que consigo controlar!

@@ -82,7 +82,7 @@ namespace TecWolf.Quest
 
             if (Convert.ToInt32(MissionType) == 2)
             {
-                QuestValue.text = MissionValue + "m" + " de " + MissionTotal + "m";
+                QuestValue.text = MissionTotal  + "m" + " de " + MissionValue  + "m";
             }
             else
             {

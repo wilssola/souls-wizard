@@ -8,10 +8,8 @@ public class RawCamera : MonoBehaviour
     public RawImage Raw;
     private WebCamTexture WebCam;
 
-    public void Start()
+    public void OnEnable()
     {
-        Raw = GetComponent<RawImage>();
-
         WebCam = new WebCamTexture();
         Raw.texture = WebCam;
         Raw.material.mainTexture = WebCam;
@@ -21,5 +19,6 @@ public class RawCamera : MonoBehaviour
     public void OnDisable()
     {
         WebCam.Stop();
+        Destroy(WebCam);
     }
 }

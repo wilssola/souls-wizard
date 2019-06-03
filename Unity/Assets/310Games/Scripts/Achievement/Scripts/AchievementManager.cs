@@ -24,9 +24,9 @@ public class AchievementManager : MonoBehaviour {
         LoadAchievementsTable();
     }
 
-	public void ShowNotification()
+	public void ShowNotification(int value)
     {
-        AchievementClass achievement = database.achievements[(int)achievementToShow];
+        AchievementClass achievement = database.achievements[value];
         achievementNotificationController.ShowNotification(achievement);
     }
 
@@ -41,7 +41,7 @@ public class AchievementManager : MonoBehaviour {
     }
 
     [ContextMenu("LoadAchievementsTable()")]
-    private void LoadAchievementsTable()
+    public void LoadAchievementsTable()
     {
         foreach (Transform child in scrollViewContent.transform)
         {
@@ -70,16 +70,21 @@ public class AchievementManager : MonoBehaviour {
         UnlockAchievement(achievementToShow);
     }
 
-    public void UnlockAchievement(AchievementID achievement) 
+    public void UnlockAchievement(AchievementID achievement)
     {
         AchievementItemController item = achievementItems[(int)achievement];
+
         if (item.unlocked)
             return;
 
-        ShowNotification();
-        PlayerPrefs.SetInt(item.achievement.id, 1);
-        item.unlocked = true;
-        item.RefreshView();
+        if (PlayerPrefs.GetInt(item.achievement.id) != 1)
+        {
+            PlayerPrefs.SetInt(item.achievement.id, 1);
+            item.unlocked = true;
+            item.RefreshView();
+
+            ShowNotification((int)achievement);
+        }
     }
 
     public void LockAllAchievements()

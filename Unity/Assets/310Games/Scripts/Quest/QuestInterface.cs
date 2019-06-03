@@ -102,6 +102,11 @@ namespace TecWolf.Quest
             Clear();
         }
 
+        private void OnDisable()
+        {
+            Exit();
+        }
+
         IEnumerator InstantiateList()
         {
             yield return new WaitForSecondsRealtime(1f);

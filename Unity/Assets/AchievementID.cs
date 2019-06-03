@@ -1,7 +1,14 @@
 public enum AchievementID {
+	Default,
 	CgkI37u62b4cEAIQAQ,
 	CgkI37u62b4cEAIQAg,
 	CgkI37u62b4cEAIQAw,
 	CgkI37u62b4cEAIQBA,
 	CgkI37u62b4cEAIQBg,
+	CgkI37u62b4cEAIQBQ,
+	CgkI37u62b4cEAIQBw,
+	CgkI37u62b4cEAIQCA,
+	CgkI37u62b4cEAIQCQ,
+	CgkI37u62b4cEAIQCg,
+	CgkI37u62b4cEAIQCw,
 }

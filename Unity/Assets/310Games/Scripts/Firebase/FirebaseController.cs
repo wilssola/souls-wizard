@@ -412,9 +412,27 @@ public class FirebaseController : MonoBehaviour
                                 {
                                     WriteDataBool("/usuarios/" + UserId + "/missoes/" + ChildSnapshot.Key, "verificada", true);
                                     WriteDataBool("/usuarios/" + UserId + "/missoes/" + ChildSnapshot.Key, "concluida", true);
+
+                                    // TecWolf.Player.PlayerController.UpdateDistance = false;
                                 }
                                 else
                                 {
+                                    /*
+                                    if (!TecWolf.Player.PlayerController.UpdateDistance)
+                                    {
+                                        TecWolf.Player.PlayerController.TotalDistance = Convert.ToInt32(ChildSnapshot.Child("total").Value);
+
+                                        TecWolf.Player.PlayerController.UpdateDistance = true;
+                                    }
+
+                                    if (TecWolf.Player.PlayerController.Distance <= 100)
+                                    {
+                                        TecWolf.Player.PlayerController.TotalDistance = TecWolf.Player.PlayerController.TotalDistance + Convert.ToInt32(TecWolf.Player.PlayerController.Distance);
+
+                                        WriteDataInt("/usuarios/" + UserId + "/missoes/" + ChildSnapshot.Key, "total", TecWolf.Player.PlayerController.TotalDistance);
+                                    }
+                                    */
+
                                     if (TecWolf.Player.PlayerController.Distance <= 100)
                                     {
                                         WriteDataInt("/usuarios/" + UserId + "/missoes/" + ChildSnapshot.Key, "total", Convert.ToInt32(ChildSnapshot.Child("total").Value) + Convert.ToInt32(TecWolf.Player.PlayerController.Distance));

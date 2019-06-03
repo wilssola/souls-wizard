@@ -21,10 +21,11 @@ namespace TecWolf.Player
 
         public GameObject  PlayerModelBuilding;
 
-        public static bool PlayerModelActive = true;
+        public static bool PlayerModelActive = true, UpdateDistance;
         public static DateTime Date = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Local);
 
         public static float Speed, Acceleration, Distance;
+        public static int TotalDistance;
         public float SpeedRotation = 5f, SpeedMovement = 10f;
 
         private float OverallDistance, LastDistance, Timer, LastTime, SpeedZero;

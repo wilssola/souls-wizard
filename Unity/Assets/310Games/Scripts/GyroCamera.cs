@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GyroCamera : MonoBehaviour
 {
@@ -83,10 +84,10 @@ public class GyroCamera : MonoBehaviour
                         {
                             MonsterModel = Instantiate(MonsterParent[i].transform.GetChild(j).gameObject);
 
-                            MonsterModel.transform.position = new Vector3(0f, 1.75f, -5f);
+                            MonsterModel.transform.position = new Vector3(0f, 1.75f, -6.5f);
                             MonsterModel.transform.localScale = new Vector3(1, 1, 1);
 
-                            MonsterModel.transform.rotation = new Quaternion(0, 0, 0, 0);
+                            MonsterModel.transform.Rotate(-Vector3.up * 180);
                         }
                     }
                 }
@@ -134,6 +135,11 @@ public class GyroCamera : MonoBehaviour
 
     public void Exit()
     {
+        foreach (GameObject Go in Buttons)
+        {
+            Go.GetComponent<Toggle>().isOn = false;
+        }
+
         UseGyro = false;
     }
 }
