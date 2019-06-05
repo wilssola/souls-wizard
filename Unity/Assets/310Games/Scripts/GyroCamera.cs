@@ -76,7 +76,7 @@ public class GyroCamera : MonoBehaviour
 
             for (int i = 0; i < MonsterParent.Length; i++)
             {
-                if (MonsterParent[i].activeSelf && MonsterModel == null)
+                if (MonsterParent[i].transform.parent.gameObject.activeSelf && MonsterModel == null)
                 {
                     ParentNumber = i;
 
@@ -153,24 +153,5 @@ public class GyroCamera : MonoBehaviour
         }
 
         UseGyro = false;
-    }
-
-    private void GetEuler()
-    {
-        if (transform.eulerAngles.x > 180f)
-        {
-            if (transform.eulerAngles.x > 256f)
-                AngleX = (transform.eulerAngles.x * -1f) + 360f;
-            else
-                AngleX = -transform.eulerAngles.x;
-        }
-        else
-        {
-
-            if (transform.eulerAngles.x > 256f)
-                AngleX = transform.eulerAngles.x - 180f;
-            else
-                AngleX = ((transform.eulerAngles.x * -1f) + 180f) * -1f;
-        }
     }
 }
