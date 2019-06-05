@@ -14,6 +14,11 @@ namespace TecWolf.Monster
             Particle.transform.parent = transform.parent.transform.parent;
         }
 
+        private void Update()
+        {
+            Particle.transform.position = new Vector3(transform.position.x, 0.25f, transform.position.z);
+        }
+
         private void OnEnable()
         {
             Particle.Play();

@@ -18,6 +18,9 @@ namespace TecWolf.Monster
         public static string MonsterName;
         public static Color MonsterColor;
 
+        public static string[] MonsterTextsStatic;
+        public string[] MonsterTexts;
+
         private void Start()
         {
             StaticMonsterUI = MonsterUI;
@@ -27,6 +30,13 @@ namespace TecWolf.Monster
             for (int i = 0; i < MonstersModels.Length; i++)
             {
                 MonstersModelsStatic[i] = MonstersModels[i];
+            }
+
+            MonsterTextsStatic = new string[MonsterTexts.Length];
+
+            for (int i = 0; i < MonsterTexts.Length; i++)
+            {
+                MonsterTextsStatic[i] = MonsterTexts[i];
             }
 
             MonsterNoticeStatic = MonsterNotice;
@@ -43,7 +53,7 @@ namespace TecWolf.Monster
 
             MonstersModelsStatic[Player.PlayerMission.Level].SetActive(true);
             
-            // MonsterNoticeStatic.text = MonsterName + " FOI SUMONADO";
+            MonsterNoticeStatic.text = MonsterTextsStatic[Player.PlayerMission.Level];
 
             System.SystemSound.Effect.PlayOneShot(System.SystemSound.MonsterSoundsStatic[1]);
 

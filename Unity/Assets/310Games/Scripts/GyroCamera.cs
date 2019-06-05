@@ -22,6 +22,8 @@ public class GyroCamera : MonoBehaviour
 
     private int ParentNumber;
 
+    public float AngleX;
+
     void Start()
     {
         GameObject Parent = new GameObject("Parent Camera");
@@ -84,10 +86,20 @@ public class GyroCamera : MonoBehaviour
                         {
                             MonsterModel = Instantiate(MonsterParent[i].transform.GetChild(j).gameObject);
 
-                            MonsterModel.transform.position = new Vector3(0f, 1.75f, -6.5f);
                             MonsterModel.transform.localScale = new Vector3(1, 1, 1);
 
-                            MonsterModel.transform.Rotate(-Vector3.up * 180);
+                            MonsterModel.transform.parent = transform;
+
+                            MonsterModel.transform.localPosition = new Vector3(0, 0, 6.5f);
+
+                            MonsterModel.transform.LookAt(transform.forward);
+
+                            if(MonsterModel.transform.eulerAngles.y == 180)
+                            {
+                                MonsterModel.transform.rotation = Quaternion.Euler(0, 180, 180);
+                            }
+
+                            MonsterModel.transform.parent = null;
                         }
                     }
                 }
@@ -141,5 +153,24 @@ public class GyroCamera : MonoBehaviour
         }
 
         UseGyro = false;
+    }
+
+    private void GetEuler()
+    {
+        if (transform.eulerAngles.x > 180f)
+        {
+            if (transform.eulerAngles.x > 256f)
+                AngleX = (transform.eulerAngles.x * -1f) + 360f;
+            else
+                AngleX = -transform.eulerAngles.x;
+        }
+        else
+        {
+
+            if (transform.eulerAngles.x > 256f)
+                AngleX = transform.eulerAngles.x - 180f;
+            else
+                AngleX = ((transform.eulerAngles.x * -1f) + 180f) * -1f;
+        }
     }
 }
