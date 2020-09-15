@@ -32,6 +32,8 @@ TecWolf  shall at all times retain ownership of the Software as originally downl
 
 TecWolf  reserves the right to grant licences to use the Software to third parties.
 
+Author: Naty - http://lattes.cnpq.br/1518237524711568
+
 ### Termination
 
 This EULA agreement is effective from the date you first use the Software and shall continue until terminated. You may terminate it at any time upon written notice to  TecWolf.
